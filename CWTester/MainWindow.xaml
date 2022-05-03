@@ -1,0 +1,20 @@
+﻿<Window x:Class="CWTester.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CWTester"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBox Height="30" Width="150" Margin="10"/>
+            <Button Content="Add" Height="30" Width="150" Margin="10"/>
+            <DataGrid Height="30" Width="150" Margin="10" ItemsSource="{Binding Text}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{StaticResource }"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</Window>
