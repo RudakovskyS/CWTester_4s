@@ -28,11 +28,13 @@
             <materialDesign:Card Margin="10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
 
                 <StackPanel Grid.Row="1" Background="#25ba4f">
-                    <RadioButton x:Name="testsRadio" Content="Tests" FontSize="20" Height="50"/>
-                    <RadioButton x:Name="resultsRadio" Content="Results" FontSize="20" Height="50"/>
-                    <RadioButton x:Name="prifileRadio" Content="Profile" FontSize="20" Height="50"/>
+                    <RadioButton x:Name="testsRadio" Content="Tests" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}"/>
+                    <RadioButton x:Name="resultsRadio" Content="Results" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}"/>
+                    <RadioButton x:Name="prifileRadio" Content="Profile" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}"/>
                 </StackPanel>
             </materialDesign:Card>
         </Grid>
-        </Grid>
+        <Grid x:Name="MainGrid" Grid.Row="1" Grid.Column="1"/>
+
+    </Grid>
     </Window>

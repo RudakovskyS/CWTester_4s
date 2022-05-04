@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\
+D:\CWTester_4s\CWTester\obj\Debug\
 CWTester
 none
 false
 DEBUG;TRACE
-E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\App.xaml
-11151548125
+D:\CWTester_4s\CWTester\App.xaml
+32017747147
 
-162055945188
-201172875438
-MainWindow.xaml;
+17-1197323059
+20-1314555811
+MainWindow.xaml;Resources\MenuButton.xaml;Views\LogInView.xaml;
 
 False
 

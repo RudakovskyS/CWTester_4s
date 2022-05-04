@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CWTester
+namespace CWTester.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LogInView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LogInView : UserControl
     {
-        public MainWindow()
+        public LogInView()
         {
             InitializeComponent();
-            MainGrid.Children.Add(new Views.LogInView());
         }
     }
 }
