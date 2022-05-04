@@ -18,3 +18,9 @@ E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTest
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTester.csproj.CopyComplete
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTester.exe
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTester.pdb
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\bin\Debug\MaterialDesignColors.dll
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\bin\Debug\MaterialDesignThemes.Wpf.dll
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\bin\Debug\MaterialDesignColors.pdb
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\bin\Debug\MaterialDesignThemes.Wpf.pdb
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\bin\Debug\MaterialDesignThemes.Wpf.xml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\App.baml

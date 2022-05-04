@@ -5,16 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CWTester"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel Orientation="Vertical">
-            <TextBox Height="30" Width="150" Margin="10"/>
-            <Button Content="Add" Height="30" Width="150" Margin="10"/>
-            <DataGrid Height="30" Width="150" Margin="10" ItemsSource="{Binding Text}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{StaticResource }"></DataGridTextColumn>
-                </DataGrid.Columns>
-            </DataGrid>
-        </StackPanel>
-    </Grid>
-</Window>
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MainWindow" Height="450" Width="800" Background="#6f42f5">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="274*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32*"/>
+                <RowDefinition Height="253*"/>
+            </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <materialDesign:Card Margin="10 0 10 0" UniformCornerRadius="5" materialDesign:ShadowAssist.ShadowDepth="Depth4" Background="#25ba4f">
+                <Grid>
+                    <TextBlock Text="Tester" FontSize="35" FontFamily="Helvetica" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black"/>
+                    <TextBlock Text="Tester" Margin="5 5 0 0" FontSize="35" FontFamily="Helvetica" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"/>
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="0">
+            <materialDesign:Card Margin="10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
+
+                <StackPanel Grid.Row="1" Background="#25ba4f">
+                    <RadioButton x:Name="testsRadio" Content="Tests" FontSize="20" Height="50"/>
+                    <RadioButton x:Name="resultsRadio" Content="Results" FontSize="20" Height="50"/>
+                    <RadioButton x:Name="prifileRadio" Content="Profile" FontSize="20" Height="50"/>
+                </StackPanel>
+            </materialDesign:Card>
+        </Grid>
+        </Grid>
+    </Window>
