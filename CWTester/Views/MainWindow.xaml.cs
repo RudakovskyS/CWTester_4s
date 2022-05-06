@@ -1,5 +1,4 @@
-﻿using CWTester.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,23 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CWTester.Views
+namespace CWTester
 {
     /// <summary>
-    /// Interaction logic for LogInView.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class LogInView : UserControl
+    public partial class MainWindow : Window
     {
-        LoginViewModel a = new LoginViewModel();
-
-        public LogInView()
+        public MainWindow()
         {
             InitializeComponent();
-            DataContext = a;
-        }
-        private void PasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-            a.password = password_textbox.Password;
         }
     }
 }

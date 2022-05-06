@@ -28,7 +28,7 @@
                 <TextBlock Text="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center" Margin="30" Foreground="Red" FontSize="12" FontFamily="Helvetica" MaxWidth="280" TextWrapping="Wrap"/>
                 <StackPanel VerticalAlignment="Center" Margin="15,40,15,0">
                     <TextBox Margin="0,10" materialDesign:HintAssist.Hint="{DynamicResource Login}" Text="{Binding login}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="18"/>
-                    <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="{DynamicResource Password}" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" x:Name="password_textbox" />
+                    <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="{DynamicResource Password}" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" x:Name="password_textbox" />
                 </StackPanel>
             </Grid>
             <Button Width="150" Command="{Binding AuthCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="LogIn"/>

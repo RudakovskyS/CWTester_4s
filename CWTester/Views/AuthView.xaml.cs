@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CWTester.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,20 +11,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CWTester
+namespace CWTester.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AuthView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AuthView : Window
     {
-        public MainWindow()
+        AuthViewModel a = new AuthViewModel();
+        public AuthView()
         {
+            DataContext = a;
             InitializeComponent();
-            MainGrid.Children.Add(new Views.LogInView());
+            //name.Text = a.CurrentUserConrol.ToString();
         }
     }
 }

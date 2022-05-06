@@ -17,13 +17,12 @@ using System.Windows.Shapes;
 namespace CWTester.Views
 {
     /// <summary>
-    /// Interaction logic for LogInView.xaml
+    /// Interaction logic for RegView.xaml
     /// </summary>
-    public partial class LogInView : UserControl
+    public partial class RegView : UserControl
     {
-        LoginViewModel a = new LoginViewModel();
-
-        public LogInView()
+        RegViewModel a = new RegViewModel();
+        public RegView()
         {
             InitializeComponent();
             DataContext = a;
