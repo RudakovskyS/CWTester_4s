@@ -86,6 +86,7 @@
       <DependentUpon>202205062341382_DeletingGroups.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="PasswordEncryptor\PasswordEncryptor.cs" />
     <Compile Include="SingletonView\SingletonAuth.cs" />
     <Compile Include="SingletonView\SingletonUser.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />

@@ -1,6 +1,7 @@
 ﻿using CWTester.Commands;
 using CWTester.DataBase;
 using CWTester.Models;
+using CWTester.PasswordEncryptor;
 using CWTester.SingletonView;
 using CWTester.Views;
 using System;
@@ -71,15 +72,15 @@ namespace CWTester.ViewModels
                              }
                              if (password != null & password[0] != ' ')
                              {
+                                 password = Encryptor.Encrypt(password);
                                  userAuth.Password = password;
                              }
                              else
                              {
                                  throw new Exception("Не верный формат пароля");
                              }
-                             
-                             user.Role = "User";
-                             if (login != null && password != null)
+                                 user.Role = "User";
+                             if (login != null && password != null && confirmPassword != null)
                              {
                                  if (db.Users.Any(a => a.UserAuth.Login == login))
                                  {
@@ -91,6 +92,8 @@ namespace CWTester.ViewModels
                                      db.UserAuths.Add(userAuth);
                                      db.SaveChanges();
                                      SingletonAuth.getInstance(null).StartViewModel.CurrentViewModel = new LoginViewModel();
+                                     SingletonAuth.getInstance(null).StartViewModel.CurrentUserConrol = new LogInView();
+
                                  }
                              }
                          }

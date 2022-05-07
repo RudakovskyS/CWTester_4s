@@ -2,6 +2,7 @@
 using CWTester.DataBase;
 using CWTester.Models;
 using CWTester.SingletonView;
+using CWTester.PasswordEncryptor;
 using CWTester.Views;
 using System;
 using System.Collections.Generic;
@@ -41,7 +42,7 @@ namespace CWTester.ViewModels
                          using (TesterContext db = new TesterContext())
                          {
                              UserAuth authUser = null;
-                             //password = SecurePassService.Hash(password);
+                             password = Encryptor.Encrypt(password);
                              authUser = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault();
                              if (authUser == null)
                              {
