@@ -93,6 +93,7 @@
     <Compile Include="ViewModels\LogInViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RegViewModel.cs" />
+    <Compile Include="ViewModels\TestsViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\AuthView.xaml.cs">
       <DependentUpon>AuthView.xaml</DependentUpon>
@@ -102,6 +103,9 @@
     </Compile>
     <Compile Include="Views\RegView.xaml.cs">
       <DependentUpon>RegView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TestsView.xaml.cs">
+      <DependentUpon>TestsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WelcomeView.xaml.cs">
       <DependentUpon>WelcomeView.xaml</DependentUpon>
@@ -132,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RegView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TestsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

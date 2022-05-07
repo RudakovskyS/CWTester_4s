@@ -11,9 +11,7 @@
                         <Grid VerticalAlignment="Stretch"
                               HorizontalAlignment="Stretch"
                               Background="{TemplateBinding Background}">
-                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{TemplateBinding Property=Content}" Foreground="white" FontFamily="Helvetica">
-
-                            </TextBlock>
+                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{TemplateBinding Property=Content}" Foreground="white" FontFamily="Helvetica"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
