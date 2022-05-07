@@ -11,21 +11,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CWTester.Views.AdminViews
 {
     /// <summary>
-    /// Interaction logic for MainAdminWindow.xaml
+    /// Interaction logic for AllUsersListView.xaml
     /// </summary>
-    public partial class MainAdminWindow : Window
+    public partial class AllUsersListView : UserControl
     {
-        MainAdminViewModel a = new MainAdminViewModel();
-        public MainAdminWindow()
+        AllUsersListViewModel a = new AllUsersListViewModel();
+        public AllUsersListView()
         {
             DataContext = a;
             InitializeComponent();
         }
-
     }
 }

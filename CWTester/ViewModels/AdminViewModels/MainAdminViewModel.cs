@@ -66,6 +66,26 @@ namespace CWTester.ViewModels.AdminViewModels
                   }));
             }
         }
+        private Command showUsers;
+        public ICommand ShowUsers
+        {
+            get
+            {
+                return showUsers ??
+                  (showUsers = new Command(obj =>
+                  {
+                      try
+                      {
+                          SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new AllUsersListViewModel();
+                          SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new AllUsersListView();
+                      }
+                      catch (Exception e)
+                      {
+                          MessageBox.Show(e.Message);
+                      }
+                  }));
+            }
+        }
         private Command openTestsUC;
         public ICommand OpenTestsUC
         {
