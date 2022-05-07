@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CWTester.ViewModels
 {
-    class WelcomeViewModel
+    class WelcomeViewModel : BaseViewModel
     {
         public void Close()
         {

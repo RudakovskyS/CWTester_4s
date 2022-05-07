@@ -17,12 +17,12 @@ using System.Windows.Shapes;
 namespace CWTester.Views.AdminViews
 {
     /// <summary>
-    /// Interaction logic for WelcomeAdminView.xaml
+    /// Interaction logic for CreateTestView.xaml
     /// </summary>
-    public partial class WelcomeAdminView : UserControl
+    public partial class CreateTestView : UserControl
     {
-        WelcomeAdminViewModel a = new WelcomeAdminViewModel();
-        public WelcomeAdminView()
+        CreateTestViewModel a = new CreateTestViewModel();
+        public CreateTestView()
         {
             DataContext = a;
             InitializeComponent();

@@ -90,6 +90,8 @@
     <Compile Include="SingletonView\SingletonAdmin.cs" />
     <Compile Include="SingletonView\SingletonAuth.cs" />
     <Compile Include="SingletonView\SingletonUser.cs" />
+    <Compile Include="ViewModels\AdminViewModels\CreateTestViewModel.cs" />
+    <Compile Include="ViewModels\AdminViewModels\EditTestsViewModel.cs" />
     <Compile Include="ViewModels\AdminViewModels\MainAdminViewModel.cs" />
     <Compile Include="ViewModels\AdminViewModels\WelcomeAdminViewModel.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />
@@ -99,6 +101,12 @@
     <Compile Include="ViewModels\RegViewModel.cs" />
     <Compile Include="ViewModels\TestsViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
+    <Compile Include="Views\AdminViews\CreateTestView.xaml.cs">
+      <DependentUpon>CreateTestView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\EditTestsView.xaml.cs">
+      <DependentUpon>EditTestsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AdminViews\MainAdminWindow.xaml.cs">
       <DependentUpon>MainAdminWindow.xaml</DependentUpon>
     </Compile>
@@ -120,6 +128,14 @@
     <Compile Include="Views\WelcomeView.xaml.cs">
       <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\AdminViews\CreateTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminViews\EditTestsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\AdminViews\MainAdminWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

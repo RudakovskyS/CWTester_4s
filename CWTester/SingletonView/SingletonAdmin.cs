@@ -10,13 +10,11 @@ namespace CWTester.SingletonView
     public class SingletonAdmin
     {
         private static SingletonAdmin instance;
-        public MainAdminViewModel StartViewModel { get; set; }
-        public object MainAdminVM { get; internal set; }
-        public object MainAdminViewModel { get; internal set; }
+        public MainAdminViewModel MainAdminViewModel { get; set; }
 
         private SingletonAdmin(MainAdminViewModel startView)
         {
-            StartViewModel = startView;
+            MainAdminViewModel = startView;
         }
         public static SingletonAdmin getInstance(MainAdminViewModel startViewModel = null)
         {

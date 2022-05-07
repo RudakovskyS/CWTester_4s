@@ -1,11 +1,13 @@
 ﻿using CWTester.Commands;
 using CWTester.SingletonView;
+using CWTester.Views;
 using CWTester.Views.AdminViews;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
@@ -44,22 +46,58 @@ namespace CWTester.ViewModels.AdminViewModels
             var window = System.Windows.Application.Current.Windows;
             window[0].Close();
         }
+        private Command createTestPage;
+        public ICommand CreateTestPage
+        {
+            get
+            {
+                return createTestPage ??
+                  (createTestPage = new Command(obj =>
+                  {
+                      try
+                      {
+                          SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new CreateTestViewModel();
+                          SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new CreateTestView();
+                      }
+                      catch (Exception e)
+                      {
+                          MessageBox.Show(e.Message);
+                      }
+                  }));
+            }
+        }
         private Command openTestsUC;
-        //public ICommand OpenTestsUC
-        //{
-        //    get
-        //    {
-        //        return openTestsUC ?? (openTestsUC = new Command(
-        //        (obj) =>
-        //        {
-        //            if (SingletonAdmin.getInstance(null).MainAdminViewModel. != new TestsViewModel())
-        //            {
-        //                SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new TestsViewModel();
-        //                SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new TestsView();
-        //            }
+        public ICommand OpenTestsUC
+        {
+            get
+            {
+                return openTestsUC ?? (openTestsUC = new Command(
+                (obj) =>
+                {
+                    if (SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel != new EditTestsViewModel())
+                    {
+                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new EditTestsViewModel();
+                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new EditTestsView();
+                    }
 
-        //        }));
-        //    }
-        //}
+                }));
+            }
+        }
+        private Command logOut;
+        public ICommand LogOut
+        {
+            get
+            {
+                return logOut ?? (logOut = new Command(
+                (obj) =>
+                {
+                    AuthView authView = new AuthView();
+                    authView.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+                    authView.Show();
+                    MainAdminViewModel.Close();
+
+                }));
+            }
+        }
     }
 }

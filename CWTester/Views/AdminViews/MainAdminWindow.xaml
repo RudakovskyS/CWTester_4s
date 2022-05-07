@@ -16,6 +16,9 @@
             <RowDefinition Height="32*"/>
             <RowDefinition Height="253*"/>
         </Grid.RowDefinitions>
+        <Button Grid.Column="1" Margin="0 0 15 0" Command="{Binding LogOut}" BorderBrush="Transparent" Background="Transparent" Height="60" Width="60" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <materialDesign:PackIcon  Kind="UserCancel"  Height="25" Width="25"/>
+        </Button>
         <Grid Grid.Row="0" Grid.Column="0">
             <materialDesign:Card Margin="10 0 10 0" UniformCornerRadius="5" materialDesign:ShadowAssist.ShadowDepth="Depth4" Background="#25ba4f">
                 <Grid>
@@ -29,6 +32,7 @@
 
                 <StackPanel Grid.Row="1" Background="#25ba4f">
                     <RadioButton x:Name="testsRadio" Content="Tests" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}" Command="{Binding OpenTestsUC}"/>
+                    <RadioButton x:Name="createTestsRadio" Content="Create new" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}" Command="{Binding CreateTestPage}"/>
                     <RadioButton x:Name="resultsRadio" Content="Results" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}"/>
                     <RadioButton x:Name="prifileRadio" Content="Users" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}"/>
                 </StackPanel>

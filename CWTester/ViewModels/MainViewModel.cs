@@ -61,5 +61,21 @@ namespace CWTester.ViewModels
                 }));
             }
         }
+        private Command logOut;
+        public ICommand LogOut
+        {
+            get
+            {
+                return logOut ?? (logOut = new Command(
+                (obj) =>
+                {
+                    AuthView authView = new AuthView();
+                    authView.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+                    authView.Show();
+                    MainViewModel.Close();
+
+                }));
+            }
+        }
     }
 }
