@@ -22,7 +22,6 @@ namespace CWTester.ViewModels
                 OnPropertyChanged("CurrentViewModel");
             }
         }
-
         public UserControl CurrentUserConrol
         {
             get { return currentUserConrol; }
