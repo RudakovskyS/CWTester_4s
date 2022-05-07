@@ -87,8 +87,11 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PasswordEncryptor\PasswordEncryptor.cs" />
+    <Compile Include="SingletonView\SingletonAdmin.cs" />
     <Compile Include="SingletonView\SingletonAuth.cs" />
     <Compile Include="SingletonView\SingletonUser.cs" />
+    <Compile Include="ViewModels\AdminViewModels\MainAdminViewModel.cs" />
+    <Compile Include="ViewModels\AdminViewModels\WelcomeAdminViewModel.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LogInViewModel.cs" />
@@ -96,6 +99,12 @@
     <Compile Include="ViewModels\RegViewModel.cs" />
     <Compile Include="ViewModels\TestsViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
+    <Compile Include="Views\AdminViews\MainAdminWindow.xaml.cs">
+      <DependentUpon>MainAdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\WelcomeAdminView.xaml.cs">
+      <DependentUpon>WelcomeAdminView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\AuthView.xaml.cs">
       <DependentUpon>AuthView.xaml</DependentUpon>
     </Compile>
@@ -111,6 +120,14 @@
     <Compile Include="Views\WelcomeView.xaml.cs">
       <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>
+    <Page Include="Views\AdminViews\MainAdminWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminViews\WelcomeAdminView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

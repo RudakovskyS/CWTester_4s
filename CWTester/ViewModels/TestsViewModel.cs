@@ -6,13 +6,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace CWTester.ViewModels
 {
     public class TestsViewModel : BaseViewModel
     {
-        ObservableCollection<Tests> Tests { get; set; }
-        ObservableCollection<Tests> SearchedTests { get; set; }
+        public ObservableCollection<Tests> Tests { get; set; }
+        public ObservableCollection<Tests> SearchedTests { get; set; }
         public string searchText { get; set; }
         public int id { get; set; }
         private Tests selectedTest;
@@ -29,8 +30,15 @@ namespace CWTester.ViewModels
         {
             using (TesterContext db = new TesterContext())
             {
-                Tests = new ObservableCollection<Tests>(db.Tests);
-                SearchedTests = new ObservableCollection<Tests>(db.Tests);
+                try
+                {
+                    Tests = new ObservableCollection<Tests>(db.Tests);
+                    SearchedTests = new ObservableCollection<Tests>(db.Tests);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
         public void Close()

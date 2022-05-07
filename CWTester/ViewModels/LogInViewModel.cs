@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using CWTester.Views.AdminViews;
 
 namespace CWTester.ViewModels
 {
@@ -41,30 +42,30 @@ namespace CWTester.ViewModels
                      {
                          using (TesterContext db = new TesterContext())
                          {
-                             UserAuth authUser = null;
+                             User user = null;
+                             int authUserId;
                              password = Encryptor.Encrypt(password);
-                             authUser = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault();
-                             if (authUser == null)
+                             authUserId = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault().Id;
+                             user = db.Users.Where(a => a.Id == authUserId).FirstOrDefault();
+                             if (user == null)
                              {
                                  throw new Exception("Невозможно найти пользователя с введенными данными");
                              }
-                             if (authUser != null)
+                             if (user.Role == "User")
                              {
-                                     MainWindow main = new MainWindow();
-                                     main.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                                     main.Show();
-                                     AuthViewModel.Close();
-                                 
+                                 MainWindow main = new MainWindow();
+                                 main.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                                 main.Show();
+                                 AuthViewModel.Close();
+
                              }
-                                 //else
-                                 //{
-                                 //    MainAdminView mainAdmin = new MainAdminView();
-                                 //    mainAdmin.WindowStartupLocation = WindowStartupLocation.CenterScreen;
-                                 //    mainAdmin.Show();
-                                 //    AuthViewModel.Close();
-                                 //}
-                                 //Settings.Default.UserMail = authUser.Email;
-                                 //Settings.Default.UserId = authUser.Id;
+                             if (user.Role == "Admin")
+                             {
+                                 MainAdminWindow main = new MainAdminWindow();
+                                 main.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                                 main.Show();
+                                 AuthViewModel.Close();
+                             }
                          }
                      }
                      catch (Exception e)

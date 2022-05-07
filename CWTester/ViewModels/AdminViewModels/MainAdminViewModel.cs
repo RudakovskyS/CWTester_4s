@@ -1,6 +1,6 @@
 ﻿using CWTester.Commands;
 using CWTester.SingletonView;
-using CWTester.Views;
+using CWTester.Views.AdminViews;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace CWTester.ViewModels
+namespace CWTester.ViewModels.AdminViewModels
 {
-    class MainViewModel : BaseViewModel
+    public class MainAdminViewModel : BaseViewModel
     {
         UserControl currentUserConrol;
         BaseViewModel curViewModel;
@@ -33,10 +33,10 @@ namespace CWTester.ViewModels
                 OnPropertyChanged("CurrentUserConrol");
             }
         }
-        public MainViewModel()
+        public MainAdminViewModel()
         {
-            SingletonUser.getInstance(this);
-            CurrentUserConrol = new WelcomeView();
+            SingletonAdmin.getInstance(this);
+            CurrentUserConrol = new WelcomeAdminView();
         }
 
         public static void Close()
@@ -45,21 +45,21 @@ namespace CWTester.ViewModels
             window[0].Close();
         }
         private Command openTestsUC;
-        public ICommand OpenTestsUC
-        {
-            get
-            {
-                return openTestsUC ?? (openTestsUC = new Command(
-                (obj) =>
-                {
-                    if (SingletonUser.getInstance(null).MainViewModel.CurrentViewModel != new TestsViewModel())
-                    {
-                        SingletonUser.getInstance(null).MainViewModel.CurrentViewModel = new TestsViewModel();
-                        SingletonUser.getInstance(null).MainViewModel.CurrentUserConrol = new TestsView();
-                    }
+        //public ICommand OpenTestsUC
+        //{
+        //    get
+        //    {
+        //        return openTestsUC ?? (openTestsUC = new Command(
+        //        (obj) =>
+        //        {
+        //            if (SingletonAdmin.getInstance(null).MainAdminViewModel. != new TestsViewModel())
+        //            {
+        //                SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new TestsViewModel();
+        //                SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new TestsView();
+        //            }
 
-                }));
-            }
-        }
+        //        }));
+        //    }
+        //}
     }
 }

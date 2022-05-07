@@ -1,5 +1,4 @@
-﻿using CWTester.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,22 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CWTester.Views
+namespace CWTester.Views.AdminViews
 {
     /// <summary>
-    /// Interaction logic for TestsView.xaml
+    /// Interaction logic for WelcomeAdminView.xaml
     /// </summary>
-    public partial class TestsView : UserControl
+    public partial class WelcomeAdminView : UserControl
     {
-        TestsViewModel a = new TestsViewModel();
-        public TestsView()
+        public WelcomeAdminView()
         {
             InitializeComponent();
-            DataContext = a;
-        }
-        private void testsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            a.id = testsList.SelectedIndex;
         }
     }
 }

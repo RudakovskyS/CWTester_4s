@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             xmlns:local="clr-namespace:CWTester.Views"
+             xmlns:local="clr-namespace:CWTester.Views" xmlns:viewmodels="clr-namespace:CWTester.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -16,37 +16,11 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Margin="0,0,0,0.4">
             <materialDesign:Card Margin="10,2,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
-                <TextBlock Text="{DynamicResource Welcome}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+                <TextBlock Text="Welcome" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
             </materialDesign:Card>
         </Grid>
         <Grid Grid.Row="1">
-            <materialDesign:Card Margin="10,10,10,10" UniformCornerRadius="5" materialDesign:ShadowAssist.ShadowDepth="Depth4">
-                <ListBox VerticalAlignment="Center" ItemsSource="{Binding categories}" SelectedItem="{Binding SelectedCategory}">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Border CornerRadius="6" BorderThickness="1" DockPanel.Dock="Top" BorderBrush="Transparent">
-                                <Border.InputBindings>
-                                    <MouseBinding MouseAction="{x:Static MouseAction.LeftDoubleClick}"
-                              Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.FindByCategory}"
-                              CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=FindByCategory}" />
-                                </Border.InputBindings>
-                                <StackPanel Orientation="Vertical">
-                                    <materialDesign:Card UniformCornerRadius="10">
-                                        <Grid Height="45" Width="100">
-                                            <TextBlock Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                        </Grid>
-                                    </materialDesign:Card>
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                    <ListBox.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
-                </ListBox>
-            </materialDesign:Card>
+            
         </Grid>
         <Grid Grid.Row="2" >
             <materialDesign:Card Margin="10,10,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
@@ -62,7 +36,7 @@
         </Grid>
         <Grid Grid.Row="3">
             <materialDesign:Card Margin="10,10,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
-                <ListBox ItemsSource="{Binding Parts}" SelectedItem="{Binding SelectedPart}" x:Name="testsList" MouseDoubleClick="testsList_MouseDoubleClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
+                <ListBox ItemsSource="{Binding Tests}" SelectedItem="{Binding SelectedTest}" x:Name="testsList" MouseDoubleClick="testsList_MouseDoubleClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border CornerRadius="6" BorderThickness="1" DockPanel.Dock="Top" BorderBrush="Transparent">
@@ -75,16 +49,16 @@
                                     <materialDesign:Card UniformCornerRadius="10" MaxWidth="150">
                                         <StackPanel Orientation="Vertical" Height=" 230" Width="130">
 
-                                            <Image Width="130" Height="110" Margin="5" Source="{Binding ImageLink}" />
+                                            <!--<Image Width="130" Height="110" Margin="5" Source="{Binding ImageLink}" />-->
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Name}" FontFamily="Helvetica"/>
+                                                <TextBlock Text="Name: " FontFamily="Helvetica"/>
                                                 <TextBlock Text="{Binding Name}" FontFamily="Helvetica" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Quantity}"/>
-                                                <TextBlock Text="{Binding Quantity}"/>
+                                                <TextBlock Text="Description: "/>
+                                                <TextBlock Text="{Binding Description}"/>
                                             </StackPanel>
-                                            <StackPanel Orientation="Horizontal">
+                                            <!--<StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{DynamicResource Price}"/>
                                                 <TextBlock Text="{Binding Price}"/>
                                             </StackPanel>
@@ -95,9 +69,9 @@
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{DynamicResource Mark}"/>
                                                 <TextBlock Text="{Binding Mark.MarkName}"/>
-                                            </StackPanel>
+                                            </StackPanel>-->
                                             <Separator Background="Black"/>
-                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.OpenFullInfo}" Content="{DynamicResource More}"/>
+                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.OpenFullInfo}" Content="More"/>
                                         </StackPanel>
                                     </materialDesign:Card>
                                 </StackPanel>

@@ -77,3 +77,7 @@ D:\CWTester_4s\CWTester\obj\Debug\CWTester.Migrations.AddingUserAuthIdMigration.
 D:\CWTester_4s\CWTester\obj\Debug\CWTester.Migrations.DeletingGroups.resources
 D:\CWTester_4s\CWTester\obj\Debug\Views\TestsView.g.cs
 D:\CWTester_4s\CWTester\obj\Debug\Views\TestsView.baml
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\MainAdminWindow.g.cs
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\WelcomeAdminView.g.cs
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\MainAdminWindow.baml
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\WelcomeAdminView.baml
