@@ -10,9 +10,7 @@ namespace CWTester.Models
     {
         public int Id { get; set; }
         public string Role { get; set; }
-        public int GroupId { get; set; }
         public int UserAuthId { get; set; }
         public UserAuth UserAuth { get; set; }
-        public Groups Groups { get; set; }
     }
 }

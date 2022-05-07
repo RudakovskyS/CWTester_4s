@@ -31,6 +31,7 @@
             <StackPanel VerticalAlignment="Center" Margin="10">
                 <TextBox Margin="0,5" materialDesign:HintAssist.Hint="Login" Text="{Binding login}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="14"/>
                 <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="Password" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="14" x:Name="password_textbox" />
+                <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="Confirm Password" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="14" x:Name="passwordConfirmation_textbox" />
             </StackPanel>
         </Grid>
         <Button Width="150" Command="{Binding RegCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20" Content="Register"/>

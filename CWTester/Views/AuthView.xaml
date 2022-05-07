@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="AuthView" Height="500" Width="350">
+        Title="AuthView" Height="500" Width="350" MaxHeight="500" MaxWidth="350" MinHeight="500" MinWidth="350">
     <Grid>
         <Frame Content="{Binding CurrentUserConrol}" NavigationUIVisibility="Hidden"/>
     </Grid>

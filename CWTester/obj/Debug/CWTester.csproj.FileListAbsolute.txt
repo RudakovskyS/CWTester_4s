@@ -63,3 +63,6 @@ E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTest
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTester.Migrations.AddingUserAuthIdMigration.resources
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\MainWindow.g.cs
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\MainWindow.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTester.Migrations.DeletingGroups.resources
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\WelcomeView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\WelcomeView.baml

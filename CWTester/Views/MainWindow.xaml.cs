@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CWTester.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,10 @@ namespace CWTester
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel a = new MainViewModel();
         public MainWindow()
         {
+            DataContext = a;
             InitializeComponent();
         }
     }

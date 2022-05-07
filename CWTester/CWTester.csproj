@@ -81,12 +81,19 @@
     <Compile Include="Migrations\202205062234503_AddingUserAuthIdMigration.Designer.cs">
       <DependentUpon>202205062234503_AddingUserAuthIdMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205062341382_DeletingGroups.cs" />
+    <Compile Include="Migrations\202205062341382_DeletingGroups.Designer.cs">
+      <DependentUpon>202205062341382_DeletingGroups.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="SingletonView\SingletonAuth.cs" />
+    <Compile Include="SingletonView\SingletonUser.cs" />
     <Compile Include="ViewModels\AuthViewModel.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\LogInViewModel.cs" />
+    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RegViewModel.cs" />
+    <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\AuthView.xaml.cs">
       <DependentUpon>AuthView.xaml</DependentUpon>
     </Compile>
@@ -95,6 +102,9 @@
     </Compile>
     <Compile Include="Views\RegView.xaml.cs">
       <DependentUpon>RegView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WelcomeView.xaml.cs">
+      <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -125,12 +135,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\WelcomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Answers.cs" />
-    <Compile Include="Models\Groups.cs" />
     <Compile Include="Models\Media.cs" />
-    <Compile Include="Models\PlannedTests.cs" />
+    <Compile Include="Models\PassedTests.cs" />
     <Compile Include="Models\QuestionResult.cs" />
     <Compile Include="Models\Questions.cs" />
     <Compile Include="Models\TestResults.cs" />
@@ -155,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205062234503_AddingUserAuthIdMigration.resx">
       <DependentUpon>202205062234503_AddingUserAuthIdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205062341382_DeletingGroups.resx">
+      <DependentUpon>202205062341382_DeletingGroups.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

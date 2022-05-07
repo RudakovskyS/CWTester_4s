@@ -31,5 +31,9 @@ namespace CWTester.Views
         {
             a.password = password_textbox.Password;
         }
+        private void ConfPasswordBox_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            a.confirmPassword = passwordConfirmation_textbox.Password;
+        }
     }
 }

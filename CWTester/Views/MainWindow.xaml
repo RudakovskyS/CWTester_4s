@@ -34,6 +34,6 @@
                 </StackPanel>
             </materialDesign:Card>
         </Grid>
-
+        <Frame Padding="0 15 10 15" Grid.Row="1" Grid.Column="1" Content="{Binding CurrentUserConrol}" NavigationUIVisibility="Hidden"/>
     </Grid>
     </Window>

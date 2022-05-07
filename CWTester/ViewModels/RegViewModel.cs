@@ -18,7 +18,7 @@ namespace CWTester.ViewModels
     {
         public string login { get; set; }
         public string password { get; set; }
-        public string group { get; set; }
+        public string confirmPassword { get; set; }
         private string errorMes;
         public string ErrorMessage
         {
@@ -65,6 +65,10 @@ namespace CWTester.ViewModels
                              UserAuth userAuth = new UserAuth();
                              user.UserAuthId = userAuth.Id;
                              userAuth.Login = login;
+                             if (password != confirmPassword)
+                             {
+                                 throw new Exception("Пароли не совпадают");
+                             }
                              if (password != null & password[0] != ' ')
                              {
                                  userAuth.Password = password;

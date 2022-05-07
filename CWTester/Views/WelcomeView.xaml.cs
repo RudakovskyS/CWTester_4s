@@ -11,20 +11,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CWTester.Views
 {
     /// <summary>
-    /// Interaction logic for AuthView.xaml
+    /// Interaction logic for WelcomeView.xaml
     /// </summary>
-    public partial class AuthView : Window
+    public partial class WelcomeView : UserControl
     {
-        AuthViewModel a = new AuthViewModel();
-        public AuthView()
+        WelcomeViewModel a = new WelcomeViewModel();
+        public WelcomeView()
         {
-            DataContext = a;
             InitializeComponent();
+            DataContext = a;
         }
     }
 }
