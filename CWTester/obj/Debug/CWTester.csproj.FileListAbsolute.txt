@@ -89,3 +89,17 @@ D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AddQuestionsView.g.cs
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AddQuestionsView.baml
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\ShowTestsView.g.cs
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\ShowTestsView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AddQuestionsView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AllUsersListView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\CreateTestView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\ShowTestsView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\MainAdminWindow.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\WelcomeAdminView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\TestsView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AddQuestionsView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AllUsersListView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\CreateTestView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\ShowTestsView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\MainAdminWindow.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\WelcomeAdminView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\TestsView.baml

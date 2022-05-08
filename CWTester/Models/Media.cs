@@ -10,6 +10,5 @@ namespace CWTester.Models
     {
         public int Id { get; set; }
         public string Path { get; set; }
-        public Questions Question { get; set; }
     }
 }

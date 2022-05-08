@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\CWTester_4s\CWTester\obj\Debug\
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\
 CWTester
 none
 false
 DEBUG;TRACE
-D:\CWTester_4s\CWTester\App.xaml
-13-922272423
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\App.xaml
+13-373355534
 
-51958126357
-20-1314555811
+511731918022
+201172875438
 Views\AdminViews\AddQuestionsView.xaml;Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\ShowTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\RegView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
 
 False
