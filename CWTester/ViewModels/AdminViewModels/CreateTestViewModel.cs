@@ -39,8 +39,8 @@ namespace CWTester.ViewModels.AdminViewModels
                             }
                             db.Tests.Add(test);
                             db.SaveChanges();
-                            SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new CreateTestViewModel();
-                            SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new CreateTestView();
+                            SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new AddQuestionsViewModel(test);
+                            SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new AddQuestionsView();
                         }
                     }
                     catch (Exception ex)

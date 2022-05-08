@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CWTester.DataBase;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace CWTester
     /// </summary>
     public partial class App : Application
     {
+        public static TesterContext db = new TesterContext();
     }
 }

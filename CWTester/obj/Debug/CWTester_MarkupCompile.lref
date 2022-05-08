@@ -1,6 +1,9 @@
 ﻿
 FD:\CWTester_4s\CWTester\App.xaml;;
+FD:\CWTester_4s\CWTester\Views\AdminViews\AddQuestionsView.xaml;;
+FD:\CWTester_4s\CWTester\Views\AdminViews\AllUsersListView.xaml;;
 FD:\CWTester_4s\CWTester\Views\AdminViews\CreateTestView.xaml;;
+FD:\CWTester_4s\CWTester\Views\AdminViews\ShowTestsView.xaml;;
 FD:\CWTester_4s\CWTester\Views\AdminViews\MainAdminWindow.xaml;;
 FD:\CWTester_4s\CWTester\Views\AdminViews\WelcomeAdminView.xaml;;
 FD:\CWTester_4s\CWTester\Views\MainWindow.xaml;;
@@ -8,6 +11,4 @@ FD:\CWTester_4s\CWTester\Views\LogInView.xaml;;
 FD:\CWTester_4s\CWTester\Views\RegView.xaml;;
 FD:\CWTester_4s\CWTester\Views\TestsView.xaml;;
 FD:\CWTester_4s\CWTester\Views\WelcomeView.xaml;;
-FD:\CWTester_4s\CWTester\Views\AdminViews\EditTestsView.xaml;;
-FD:\CWTester_4s\CWTester\Views\AdminViews\AllUsersListView.xaml;;
 

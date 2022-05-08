@@ -25,7 +25,7 @@
         <Grid Grid.Row="2" >
             <materialDesign:Card Margin="10,10,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <TextBox BorderThickness="1" Text="{Binding textForSearch}" VerticalContentAlignment="Center" Height="25" Width=" 400" VerticalAlignment="Center" >
+                    <TextBox BorderThickness="1" Text="{Binding searchText}" VerticalContentAlignment="Center" Height="25" Width=" 400" VerticalAlignment="Center" >
 
                     </TextBox>
                     <Button Width="75" Height="25" Command="{Binding FindByName}" >
@@ -36,7 +36,7 @@
         </Grid>
         <Grid Grid.Row="3">
             <materialDesign:Card Margin="10,10,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
-                <ListBox ItemsSource="{Binding Tests}" SelectedItem="{Binding SelectedTest}" x:Name="testsList" MouseDoubleClick="testsList_MouseDoubleClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
+                <ListBox ItemsSource="{Binding SearchedTests}" SelectedItem="{Binding SelectedTest}" x:Name="testsList" MouseDoubleClick="testsList_MouseDoubleClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border CornerRadius="6" BorderThickness="1" DockPanel.Dock="Top" BorderBrush="Transparent">
@@ -47,31 +47,18 @@
                                 </Border.InputBindings>
                                 <StackPanel Orientation="Vertical">
                                     <materialDesign:Card UniformCornerRadius="10" MaxWidth="150">
-                                        <StackPanel Orientation="Vertical" Height=" 230" Width="130">
+                                        <StackPanel Orientation="Vertical" Height="75" Width="130">
 
-                                            <!--<Image Width="130" Height="110" Margin="5" Source="{Binding ImageLink}" />-->
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="Name: " FontFamily="Helvetica"/>
                                                 <TextBlock Text="{Binding Name}" FontFamily="Helvetica" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="Description: "/>
-                                                <TextBlock Text="{Binding Description}"/>
+                                                <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
-                                            <!--<StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Price}"/>
-                                                <TextBlock Text="{Binding Price}"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Category}"/>
-                                                <TextBlock Text="{Binding Category.Name}"/>
-                                            </StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Mark}"/>
-                                                <TextBlock Text="{Binding Mark.MarkName}"/>
-                                            </StackPanel>-->
                                             <Separator Background="Black"/>
-                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.OpenFullInfo}" Content="More"/>
+                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.OpenFullInfo}" Content="Pass"/>
                                         </StackPanel>
                                     </materialDesign:Card>
                                 </StackPanel>

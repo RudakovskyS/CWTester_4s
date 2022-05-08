@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\CWTester_4s\CWTester\App.xaml
-12707913526
+13-922272423
 
-49-1885899238
+51958126357
 20-1314555811
-Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\EditTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\RegView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
+Views\AdminViews\AddQuestionsView.xaml;Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\ShowTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\RegView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
 
 False
 

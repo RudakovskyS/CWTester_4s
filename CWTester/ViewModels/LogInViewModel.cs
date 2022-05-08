@@ -45,7 +45,7 @@ namespace CWTester.ViewModels
                              User user = null;
                              int authUserId;
                              password = Encryptor.Encrypt(password);
-                             authUserId = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault().Id;
+                             authUserId = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault() == null ? 0 : db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault().Id;
                              user = db.Users.Where(a => a.Id == authUserId).FirstOrDefault();
                              if (user == null)
                              {

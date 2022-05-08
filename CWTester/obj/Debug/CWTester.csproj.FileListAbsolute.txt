@@ -83,7 +83,9 @@ D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\MainAdminWindow.baml
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\WelcomeAdminView.baml
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\CreateTestView.g.cs
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\CreateTestView.baml
-D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\EditTestsView.g.cs
-D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\EditTestsView.baml
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AllUsersListView.g.cs
 D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AllUsersListView.baml
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AddQuestionsView.g.cs
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AddQuestionsView.baml
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\ShowTestsView.g.cs
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\ShowTestsView.baml

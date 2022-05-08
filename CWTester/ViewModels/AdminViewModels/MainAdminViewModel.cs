@@ -94,10 +94,10 @@ namespace CWTester.ViewModels.AdminViewModels
                 return openTestsUC ?? (openTestsUC = new Command(
                 (obj) =>
                 {
-                    if (SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel != new EditTestsViewModel())
+                    if (SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel != new ShowTestsViewModel())
                     {
-                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new EditTestsViewModel();
-                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new EditTestsView();
+                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new ShowTestsViewModel();
+                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new ShowTestsView();
                     }
 
                 }));

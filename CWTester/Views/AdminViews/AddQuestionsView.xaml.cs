@@ -17,19 +17,15 @@ using System.Windows.Shapes;
 namespace CWTester.Views.AdminViews
 {
     /// <summary>
-    /// Interaction logic for EditTestsView.xaml
+    /// Interaction logic for AddQuestionsView.xaml
     /// </summary>
-    public partial class EditTestsView : UserControl
+    public partial class AddQuestionsView : UserControl
     {
-        EditTestsViewModel a = new EditTestsViewModel();
-        public EditTestsView()
+        AddQuestionsViewModel a = new AddQuestionsViewModel();
+        public AddQuestionsView()
         {
             DataContext = a;
             InitializeComponent();
-        }
-        private void testsList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            a.id = testsList.SelectedIndex;
         }
     }
 }
