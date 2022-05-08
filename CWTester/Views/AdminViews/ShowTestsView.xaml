@@ -36,7 +36,7 @@
         </Grid>
         <Grid Grid.Row="3">
             <materialDesign:Card Margin="10,10,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
-                <ListBox ItemsSource="{Binding SearchedTests}" SelectedItem="{Binding SelectedTest}" x:Name="testsList" MouseDown="testsList_MouseClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
+                <ListBox ItemsSource="{Binding SearchedTests}" SelectedItem="{Binding SelectedTest}" x:Name="testsList" MouseDoubleClick="testsList_MouseClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border CornerRadius="6" BorderThickness="1" DockPanel.Dock="Top" BorderBrush="Transparent">

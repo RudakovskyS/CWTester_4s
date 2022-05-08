@@ -74,6 +74,8 @@ namespace CWTester.ViewModels.AdminViewModels
                               db.Tests.Remove(SearchedTests.First(x => x.Name == Tests[id].Name));
                               db.SaveChanges();
                               SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new ShowTestsViewModel();
+                              SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new ShowTestsView();
+                              
                           }
                       }
                       catch (Exception e)

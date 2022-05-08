@@ -76,7 +76,7 @@ namespace CWTester.ViewModels.AdminViewModels
                             db.Answers.Add(correctAnswer);
                             db.SaveChanges();
 
-                            SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new AddQuestionsViewModel(Test);
+                            SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new AddQuestionsViewModel();
                             SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new AddQuestionsView();
                         }
                     }
@@ -86,14 +86,6 @@ namespace CWTester.ViewModels.AdminViewModels
                     }
                 }));
             }
-        }
-        public AddQuestionsViewModel(Tests test)
-        {
-            Test = test;
-        }
-        public AddQuestionsViewModel()
-        {
-
         }
     }
 }
