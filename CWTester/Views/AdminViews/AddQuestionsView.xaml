@@ -13,12 +13,12 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
                     <TextBlock Text="Add Questions" FontSize="30" FontWeight="Bold" Margin="10,10,10,10"/>
                     <TextBox materialDesign:HintAssist.Hint="Question" Text="{Binding Question}" Width="200"/>
                     
                 </StackPanel>
-                <StackPanel Grid.Column="1" Orientation="Vertical">
+                <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
                     <TextBox materialDesign:HintAssist.Hint="First Answer" Text="{Binding FirstAnswer}" Width="200"/>
                     <TextBox materialDesign:HintAssist.Hint="Second Answer" Text="{Binding SecondAnswer}" Width="200"/>
                     <TextBox materialDesign:HintAssist.Hint="Third Answer" Text="{Binding ThirdAnswer}" Width="200"/>

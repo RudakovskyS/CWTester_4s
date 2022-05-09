@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="46*"/>
+            <RowDefinition Height="60*"/>
             <RowDefinition Height="69*"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="265*"/>
@@ -42,12 +42,12 @@
                             <Border CornerRadius="6" BorderThickness="1" DockPanel.Dock="Top" BorderBrush="Transparent">
                                 <Border.InputBindings>
                                     <MouseBinding MouseAction="{x:Static MouseAction.LeftDoubleClick}"
-                              Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.OpenFullInfo}"
-                              CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=OpenFullInfo}" />
+                              Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.PassTest}"
+                              CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=PassTest}" />
                                 </Border.InputBindings>
                                 <StackPanel Orientation="Vertical">
                                     <materialDesign:Card UniformCornerRadius="10" MaxWidth="150">
-                                        <StackPanel Orientation="Vertical" Height="75" Width="130">
+                                        <StackPanel Orientation="Vertical" Height="75" Width="150">
 
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="Name: " FontFamily="Helvetica"/>
@@ -57,8 +57,6 @@
                                                 <TextBlock Text="Description: "/>
                                                 <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
-                                            <Separator Background="Black"/>
-                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.PassTest}" Content="Pass"/>
                                         </StackPanel>
                                     </materialDesign:Card>
                                 </StackPanel>

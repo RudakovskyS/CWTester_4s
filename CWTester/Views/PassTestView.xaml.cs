@@ -27,5 +27,66 @@ namespace CWTester.Views
             DataContext = a;
             InitializeComponent();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if (Btn1.Content == a.CorrectAnswer.Text)
+            {
+                Btn1.Background = Brushes.Green;
+            }
+            else
+            {
+                Btn1.Background = Brushes.Red;
+            }
+            Btn1.IsEnabled = false;
+            Btn2.IsEnabled = false;
+            Btn3.IsEnabled = false;
+            Btn4.IsEnabled = false;
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            if (Btn2.Content == a.CorrectAnswer.Text)
+            {
+                Btn2.Background = Brushes.Green;
+            }
+            else
+            {
+                Btn2.Background = Brushes.Red;
+            }
+            Btn1.IsEnabled = false;
+            Btn2.IsEnabled = false;
+            Btn3.IsEnabled = false;
+            Btn4.IsEnabled = false;
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            if (Btn3.Content == a.CorrectAnswer.Text)
+            {
+                Btn3.Background = Brushes.Green;
+            }
+            else
+            {
+                Btn3.Background = Brushes.Red;
+            }
+            Btn1.IsEnabled = false;
+            Btn2.IsEnabled = false;
+            Btn3.IsEnabled = false;
+            Btn4.IsEnabled = false;
+        }
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            if (Btn4.Content == a.CorrectAnswer.Text)
+            {
+                Btn4.Background = Brushes.Green;
+            }
+            else
+            {
+                Btn4.Background = Brushes.Red;
+            }
+            Btn1.IsEnabled = false;
+            Btn2.IsEnabled = false;
+            Btn3.IsEnabled = false;
+            Btn4.IsEnabled = false;
+        }
     }
 }
