@@ -103,3 +103,5 @@ E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\MainAdminWindow.baml
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\WelcomeAdminView.baml
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\TestsView.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\PassTestView.g.cs
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\PassTestView.baml

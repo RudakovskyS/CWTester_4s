@@ -2,6 +2,7 @@
 using CWTester.DataBase;
 using CWTester.Models;
 using CWTester.SingletonView;
+using CWTester.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -26,6 +27,10 @@ namespace CWTester.ViewModels
                 OnPropertyChanged("SearchedTests");
             }
         }
+
+        public IEnumerable<Questions> SearchedQuestions { get; private set; }
+        public IEnumerable<Answers> SearchedAnswers { get; private set; }
+        public IEnumerable<Media> SearchedMedia { get; private set; }
         public string searchText { get; set; }
         public int id { get; set; }
         private Tests selectedTest;
@@ -51,6 +56,35 @@ namespace CWTester.ViewModels
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+        private Command passTest;
+        public ICommand PassTest
+        {
+            get
+            {
+                return passTest ??
+                  (passTest = new Command(obj =>
+                  {
+                      try
+                      {
+                          using (TesterContext db = new TesterContext())
+                          {
+                              SearchedTests = new ObservableCollection<Tests>(db.Tests);
+                              SearchedQuestions = new ObservableCollection<Questions>(db.Questions);
+                              SearchedAnswers = new ObservableCollection<Answers>(db.Answers);
+                              SearchedMedia = new ObservableCollection<Media>(db.Medias);
+                              
+                              SingletonUser.getInstance(null).MainViewModel.CurrentViewModel = new PassTestViewModel();
+                              SingletonUser.getInstance(null).MainViewModel.CurrentUserConrol = new PassTestView();
+
+                          }
+                      }
+                      catch (Exception e)
+                      {
+                          MessageBox.Show(e.Message);
+                      }
+                  }));
             }
         }
         private Command findByName;

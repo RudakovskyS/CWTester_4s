@@ -58,7 +58,7 @@
                                                 <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
                                             <Separator Background="Black"/>
-                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.OpenFullInfo}" Content="Pass"/>
+                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.PassTest}" Content="Pass"/>
                                         </StackPanel>
                                     </materialDesign:Card>
                                 </StackPanel>
