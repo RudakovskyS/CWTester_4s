@@ -43,6 +43,7 @@ namespace CWTester.ViewModels
                 OnPropertyChanged("SelectedTest");
             }
         }
+        public static Tests CurrentTest;
         public TestsViewModel()
         {
             using (TesterContext db = new TesterContext())
@@ -70,7 +71,7 @@ namespace CWTester.ViewModels
                       {
                           using (TesterContext db = new TesterContext())
                           {
-                              SearchedTests = new ObservableCollection<Tests>(db.Tests);
+                              CurrentTest = new ObservableCollection<Tests>(db.Tests).Where(x => x.Id == SelectedTest.Id).FirstOrDefault();
                               SearchedQuestions = new ObservableCollection<Questions>(db.Questions);
                               SearchedAnswers = new ObservableCollection<Answers>(db.Answers);
                               SearchedMedia = new ObservableCollection<Media>(db.Medias);

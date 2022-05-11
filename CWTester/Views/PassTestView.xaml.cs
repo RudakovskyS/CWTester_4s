@@ -32,6 +32,7 @@ namespace CWTester.Views
         {
             if (Btn1.Content == a.CorrectAnswer.Text)
             {
+                PassTestViewModel.Result++;
                 Btn1.Background = Brushes.Green;
             }
             else
@@ -47,6 +48,7 @@ namespace CWTester.Views
         {
             if (Btn2.Content == a.CorrectAnswer.Text)
             {
+                PassTestViewModel.Result++;
                 Btn2.Background = Brushes.Green;
             }
             else
@@ -62,6 +64,7 @@ namespace CWTester.Views
         {
             if (Btn3.Content == a.CorrectAnswer.Text)
             {
+                PassTestViewModel.Result++;
                 Btn3.Background = Brushes.Green;
             }
             else
@@ -77,6 +80,7 @@ namespace CWTester.Views
         {
             if (Btn4.Content == a.CorrectAnswer.Text)
             {
+                PassTestViewModel.Result++;
                 Btn4.Background = Brushes.Green;
             }
             else

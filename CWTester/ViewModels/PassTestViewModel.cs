@@ -28,17 +28,18 @@ namespace CWTester.ViewModels
         public Answers FourthAnswer { get; set; }
         public Answers CorrectAnswer { get; set; }
         public static int id { get; set; }
+        public static int Result { get; set; }
+        public static double Percent { get; set; }
         public Tests Test { get; set; }
-        private Command giveAnswer;
         
         public PassTestViewModel()
         {
             using (TesterContext db = new TesterContext())
             {
-                Questions = new ObservableCollection<Questions>(db.Questions);
+                Test = TestsViewModel.CurrentTest;
+                Questions = new ObservableCollection<Questions>(db.Questions).Where(x => x.TestId.Equals(Test.Id));
                 CurrentQuestion = Questions.ElementAt(id);
                 Answers = new ObservableCollection<Answers>(db.Answers).Where(x => x.Questions.Id == CurrentQuestion.Id);
-                //Questions = new ObservableCollection<Questions>(db.Questions).Where(x => x.Tests.Id == Test.Id);
                 Answers = Shuffle(Answers.ToList());
                 FirstAnswer = Answers.ElementAt(0);
                 SecondAnswer = Answers.ElementAt(1);
@@ -61,24 +62,7 @@ namespace CWTester.ViewModels
             }
             return list;
         }
-        public ICommand GiveAnswer
-        {
-            get
-            {
-                return giveAnswer ??
-              (giveAnswer = new Command(obj =>
-              {
-                  try
-                  {
-                      
-                  }
-                  catch (Exception ex)
-                  {
-                      MessageBox.Show(ex.Message);
-                  }
-              }));
-            }
-        }
+
         private Command toNextQuestion;
         public ICommand ToNextQuestion
         {
@@ -97,11 +81,32 @@ namespace CWTester.ViewModels
                       }
                       else
                       {
+                          Percent = (double)Result / Questions.Count();
+                          MessageBox.Show("Test is over. Result: " + Math.Round(Percent * 100, 0) + "%");
                           SingletonUser.getInstance(null).MainViewModel.CurrentViewModel = new TestsViewModel();
                           SingletonUser.getInstance(null).MainViewModel.CurrentUserConrol = new TestsView();
-                          id = 0;
+                          TestResults testResults = new TestResults();
+                          PassedTests passedTests = new PassedTests();
+                          
+                          passedTests.TestDate = DateTime.Now;
+                          passedTests.TestId = Test.Id;
+                          testResults.PassedTests = passedTests;
+                          testResults.Result = (int)(Percent * 100);
+                          
+                          testResults.UserId = 0;
+                          using (TesterContext db = new TesterContext())
+                          {
+                              User user = db.Users.First();
+                              testResults.UserId = user.Id;
+                              testResults.User = user;
+                              db.TestResults.Add(testResults);
+                              db.PassedTests.Add(passedTests);
+                              db.SaveChanges();
+                          }
+                              id = 0;
+                          Result = 0;
                       }
-                      
+
                   }
                   catch (Exception ex)
                   {

@@ -48,6 +48,7 @@ namespace CWTester.ViewModels.AdminViewModels
                             Media media = new Media();
                             media.Path = "";
                             Questions question = new Questions();
+                            question.TestId = Test.Id;
                             question.Text = Question;
                             question.Tests = Test;
                             question.Media = media;
