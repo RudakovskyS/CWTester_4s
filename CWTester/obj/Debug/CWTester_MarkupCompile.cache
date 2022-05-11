@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\
+D:\CWTester_4s\CWTester\obj\Debug\
 CWTester
 none
 false
 DEBUG;TRACE
-E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\App.xaml
-15-865425020
+D:\CWTester_4s\CWTester\App.xaml
+17-763531243
 
-55-1419319197
-201172875438
-Views\AdminViews\AddQuestionsView.xaml;Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\ShowTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\PassTestView.xaml;Views\RegView.xaml;Views\ResultView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
+59-517746412
+20-1314555811
+Views\AdminViews\AddQuestionsView.xaml;Views\AdminViews\AdminResultView.xaml;Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\ShowTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\PassTestView.xaml;Views\ProfileView.xaml;Views\RegView.xaml;Views\ResultView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
 
 False
 

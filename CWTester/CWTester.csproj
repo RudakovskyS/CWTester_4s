@@ -91,6 +91,7 @@
     <Compile Include="SingletonView\SingletonAuth.cs" />
     <Compile Include="SingletonView\SingletonUser.cs" />
     <Compile Include="ViewModels\AdminViewModels\AddQuestionsViewModel.cs" />
+    <Compile Include="ViewModels\AdminViewModels\AdminResultsViewModel.cs" />
     <Compile Include="ViewModels\AdminViewModels\AllUsersListViewModel.cs" />
     <Compile Include="ViewModels\AdminViewModels\CreateTestViewModel.cs" />
     <Compile Include="ViewModels\AdminViewModels\ShowTestsViewModel.cs" />
@@ -101,12 +102,16 @@
     <Compile Include="ViewModels\LogInViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\PassTestViewModel.cs" />
+    <Compile Include="ViewModels\ProfileViewModel.cs" />
     <Compile Include="ViewModels\RegViewModel.cs" />
     <Compile Include="ViewModels\ResultsViewModel.cs" />
     <Compile Include="ViewModels\TestsViewModel.cs" />
     <Compile Include="ViewModels\WelcomeViewModel.cs" />
     <Compile Include="Views\AdminViews\AddQuestionsView.xaml.cs">
       <DependentUpon>AddQuestionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AdminViews\AdminResultView.xaml.cs">
+      <DependentUpon>AdminResultView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\AdminViews\AllUsersListView.xaml.cs">
       <DependentUpon>AllUsersListView.xaml</DependentUpon>
@@ -132,6 +137,9 @@
     <Compile Include="Views\PassTestView.xaml.cs">
       <DependentUpon>PassTestView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RegView.xaml.cs">
       <DependentUpon>RegView.xaml</DependentUpon>
     </Compile>
@@ -145,6 +153,10 @@
       <DependentUpon>WelcomeView.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\AdminViews\AddQuestionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdminViews\AdminResultView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -194,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\PassTestView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -21,28 +21,7 @@ namespace CWTester.ViewModels
         public ObservableCollection<UserAuth> UserAuths { get; set; }
         public ObservableCollection<TestResults> TestResults { get; set; }
         public ObservableCollection<PassedTests> PassedTests { get; set; }
-        private Command clearHistory;
-        //public ICommand ClearHistory
-        //{
-        //    get
-        //    {
-        //        return clearHistory ??
-        //      (clearHistory = new Command(obj =>
-        //      {
-        //          try
-        //          {
-        //              using (TesterContext db = new TesterContext())
-        //              {
-
-        //              }
-        //          }
-        //          catch (Exception ex)
-        //          {
-        //              MessageBox.Show(ex.Message);
-        //          }
-        //      }));
-        //    }
-        //}
+       
         public ResultsViewModel()
         {
             using (TesterContext db = new TesterContext())

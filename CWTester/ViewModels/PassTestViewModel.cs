@@ -86,16 +86,12 @@ namespace CWTester.ViewModels
                           PassedTests passedTests = new PassedTests();
                           
                           passedTests.TestDate = DateTime.Now;
-                          passedTests.TestId = Test.Id;
                           testResults.PassedTests = passedTests;
                           testResults.Result = (int)(Percent * 100);
-                          
-                          testResults.UserId = 0;
                           using (TesterContext db = new TesterContext())
                           {
-                              User user = db.Users.First();
-                              testResults.UserId = user.Id;
-                              testResults.User = user;
+                              passedTests.Tests = db.Tests.Where(x => x.Id == TestsViewModel.CurrentTest.Id).First();
+                              testResults.User = db.Users.Where(x => x.Id == LoginViewModel.user.Id).First();
                               db.TestResults.Add(testResults);
                               db.PassedTests.Add(passedTests);
                               db.SaveChanges();

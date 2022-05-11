@@ -33,7 +33,7 @@
                 <StackPanel Grid.Row="1" Background="#25ba4f">
                     <RadioButton x:Name="testsRadio" Content="Tests" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}" Command="{Binding OpenTestsUC}"/>
                     <RadioButton x:Name="resultsRadio" Content="Results" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}" Command="{Binding OpenResultsUC}"/>
-                    <RadioButton x:Name="prifileRadio" Content="Profile" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}"/>
+                    <RadioButton x:Name="prifileRadio" Content="Profile" FontSize="20" Height="50" Style="{StaticResource MenuButtonTheme}" Command="{Binding OpenProfileUC}"/>
                 </StackPanel>
             </materialDesign:Card>
         </Grid>

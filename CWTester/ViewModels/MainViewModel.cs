@@ -78,6 +78,23 @@ namespace CWTester.ViewModels
                 }));
             }
         }
+        private Command openProfileUC;
+        public ICommand OpenProfileUC
+        {
+            get
+            {
+                return openProfileUC ?? (openProfileUC = new Command(
+                (obj) =>
+                {
+                    if (SingletonUser.getInstance(null).MainViewModel.CurrentViewModel != new ProfileViewModel())
+                    {
+                        SingletonUser.getInstance(null).MainViewModel.CurrentViewModel = new ProfileViewModel();
+                        SingletonUser.getInstance(null).MainViewModel.CurrentUserConrol = new ProfileView();
+                    }
+
+                }));
+            }
+        }
         private Command logOut;
         public ICommand LogOut
         {

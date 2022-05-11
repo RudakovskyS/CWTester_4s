@@ -22,6 +22,7 @@ namespace CWTester.ViewModels
         public string password { get; set; }
         public Command authCommand;
         private string errorMessage;
+        public static User user { get; set; }
         public string ErrorMessage
         {
             get { return errorMessage; }
@@ -42,7 +43,6 @@ namespace CWTester.ViewModels
                      {
                          using (TesterContext db = new TesterContext())
                          {
-                             User user = null;
                              int authUserId;
                              password = Encryptor.Encrypt(password);
                              authUserId = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault() == null ? 0 : db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault().Id;

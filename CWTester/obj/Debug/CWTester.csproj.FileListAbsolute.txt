@@ -111,3 +111,7 @@ D:\CWTester_4s\CWTester\obj\Debug\Views\ResultView.g.cs
 D:\CWTester_4s\CWTester\obj\Debug\Views\ResultView.baml
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\ResultView.g.cs
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\ResultView.baml
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AdminResultView.g.cs
+D:\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AdminResultView.baml
+D:\CWTester_4s\CWTester\obj\Debug\Views\ProfileView.g.cs
+D:\CWTester_4s\CWTester\obj\Debug\Views\ProfileView.baml

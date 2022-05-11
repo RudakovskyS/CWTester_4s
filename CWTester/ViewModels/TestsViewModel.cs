@@ -33,17 +33,9 @@ namespace CWTester.ViewModels
         public IEnumerable<Media> SearchedMedia { get; private set; }
         public string searchText { get; set; }
         public int id { get; set; }
-        private Tests selectedTest;
-        public Tests SelectedTest
-        {
-            get { return selectedTest; }
-            set
-            {
-                selectedTest = value;
-                OnPropertyChanged("SelectedTest");
-            }
-        }
-        public static Tests CurrentTest;
+        public static Tests SelectedTest { get; set; }
+
+        public static Tests CurrentTest { get; set; }
         public TestsViewModel()
         {
             using (TesterContext db = new TesterContext())

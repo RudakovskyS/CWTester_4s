@@ -103,6 +103,23 @@ namespace CWTester.ViewModels.AdminViewModels
                 }));
             }
         }
+        private Command openResultsUC;
+        public ICommand OpenResultsUC
+        {
+            get
+            {
+                return openResultsUC ?? (openResultsUC = new Command(
+                (obj) =>
+                {
+                    if (SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel != new AdminResultsViewModel())
+                    {
+                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new AdminResultsViewModel();
+                        SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new AdminResultView();
+                    }
+
+                }));
+            }
+        }
         private Command logOut;
         public ICommand LogOut
         {
