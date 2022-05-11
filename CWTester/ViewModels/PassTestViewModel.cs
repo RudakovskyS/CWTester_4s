@@ -14,9 +14,6 @@ using CWTester.Views;
 
 namespace CWTester.ViewModels
 {
-    
-        
-    
     class PassTestViewModel : BaseViewModel
     {
         public IEnumerable<Questions> Questions { get; set; }
