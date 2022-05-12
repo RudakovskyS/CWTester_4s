@@ -17,19 +17,19 @@ namespace CWTester.ViewModels
     public class ResultsViewModel : BaseViewModel
     {
         public ObservableCollection<Tests> Tests { get; set; }
-        public ObservableCollection<User> Users { get; set; }
+        public User User { get; set; }
         public ObservableCollection<UserAuth> UserAuths { get; set; }
-        public ObservableCollection<TestResults> TestResults { get; set; }
+        public IEnumerable<TestResults> TestResults { get; set; }
         public ObservableCollection<PassedTests> PassedTests { get; set; }
        
         public ResultsViewModel()
         {
             using (TesterContext db = new TesterContext())
             {
+                User = new ObservableCollection<User>(db.Users).Where(x => x.Id == LoginViewModel.user.Id).First();
+                TestResults = new ObservableCollection<TestResults>(db.TestResults).Where(x => x.User.Id == User.Id);
                 PassedTests = new ObservableCollection<PassedTests>(db.PassedTests);
-                TestResults = new ObservableCollection<TestResults>(db.TestResults);
                 Tests = new ObservableCollection<Tests>(db.Tests);
-                Users = new ObservableCollection<User>(db.Users);
                 UserAuths = new ObservableCollection<UserAuth>(db.UserAuths);
             }
         }
