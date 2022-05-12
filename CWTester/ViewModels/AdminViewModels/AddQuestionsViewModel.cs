@@ -3,6 +3,7 @@ using CWTester.DataBase;
 using CWTester.Models;
 using CWTester.SingletonView;
 using CWTester.Views.AdminViews;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -31,6 +32,29 @@ namespace CWTester.ViewModels.AdminViewModels
         public string SecondAnswer { get; set; }
         public string ThirdAnswer { get; set; }
         public string CorrectAnswer { get; set; }
+        public string SelectedFile { get; set; }
+        private Command addImage;
+        public ICommand AddImage
+        {
+            get
+            {
+                return addImage ??
+                  (addImage = new Command(obj =>
+                  {
+                      try
+                      {
+                          OpenFileDialog openFileDialog = new OpenFileDialog();
+                          openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png";
+                          openFileDialog.ShowDialog();
+                          SelectedFile = openFileDialog.FileName;
+                      }
+                      catch (Exception e)
+                      {
+                          MessageBox.Show(e.Message);
+                      }
+                  }));
+            }
+        }
         private Command addQuestion;
         public ICommand AddQuestion
         {

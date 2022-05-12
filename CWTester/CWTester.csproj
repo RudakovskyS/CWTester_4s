@@ -85,6 +85,10 @@
     <Compile Include="Migrations\202205062341382_DeletingGroups.Designer.cs">
       <DependentUpon>202205062341382_DeletingGroups.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202205121518214_FixModel.cs" />
+    <Compile Include="Migrations\202205121518214_FixModel.Designer.cs">
+      <DependentUpon>202205121518214_FixModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PasswordEncryptor\PasswordEncryptor.cs" />
     <Compile Include="SingletonView\SingletonAdmin.cs" />
@@ -234,7 +238,6 @@
     <Compile Include="Models\Answers.cs" />
     <Compile Include="Models\Media.cs" />
     <Compile Include="Models\PassedTests.cs" />
-    <Compile Include="Models\QuestionResult.cs" />
     <Compile Include="Models\Questions.cs" />
     <Compile Include="Models\TestResults.cs" />
     <Compile Include="Models\Tests.cs" />
@@ -261,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202205062341382_DeletingGroups.resx">
       <DependentUpon>202205062341382_DeletingGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202205121518214_FixModel.resx">
+      <DependentUpon>202205121518214_FixModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

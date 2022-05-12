@@ -31,7 +31,9 @@ namespace CWTester.ViewModels.AdminViewModels
         private IEnumerable<Tests> searchedTests;
         public IEnumerable<Questions> SearchedQuestions { get; set; }
         public IEnumerable<Answers> SearchedAnswers { get; set; }
+        public IEnumerable<PassedTests> SearchedPassedTests { get; set; }
         public IEnumerable<Media> SearchedMedia { get; set; }
+        public IEnumerable<TestResults> SearchedResults { get; set; }
         public IEnumerable<Tests> SearchedTests
         {
             get { return searchedTests; }
@@ -67,10 +69,14 @@ namespace CWTester.ViewModels.AdminViewModels
                           {
                               SearchedTests = new ObservableCollection<Tests>(db.Tests);
                               SearchedQuestions = new ObservableCollection<Questions>(db.Questions);
+                              SearchedResults = new ObservableCollection<TestResults>(db.TestResults);
+                              SearchedPassedTests = new ObservableCollection<PassedTests>(db.PassedTests);
                               SearchedAnswers = new ObservableCollection<Answers>(db.Answers);
                               SearchedMedia = new ObservableCollection<Media>(db.Medias);
                               db.Answers.RemoveRange(SearchedAnswers.Where(x => x.Questions.Tests.Id == Tests[id].Id));
                               db.Questions.RemoveRange(SearchedQuestions.Where(x => x.Tests.Id == Tests[id].Id));
+                              db.PassedTests.RemoveRange(SearchedPassedTests.Where(x => x.TestId == Tests[id].Id));
+                              db.TestResults.RemoveRange(SearchedResults.Where(x => x.PassedTests.Tests.Id == Tests[id].Id));
                               db.Tests.Remove(SearchedTests.First(x => x.Name == Tests[id].Name));
                               db.SaveChanges();
                               SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new ShowTestsViewModel();

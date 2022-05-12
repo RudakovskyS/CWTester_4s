@@ -10,11 +10,7 @@
     <Grid>
         <materialDesign:Card UniformCornerRadius="15">
             <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <StackPanel Orientation="Vertical" Width="150">
+                <StackPanel Orientation="Vertical" Width="150" VerticalAlignment="Center">
                     <TextBox Text="{Binding Name}" materialDesign:HintAssist.Hint="Name"></TextBox>
                     <TextBox Text="{Binding Description}" materialDesign:HintAssist.Hint="Description"></TextBox>
                     <Button Content="Add test" Command="{Binding AddTest}"/>

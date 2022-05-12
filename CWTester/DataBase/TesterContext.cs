@@ -13,7 +13,6 @@ namespace CWTester.DataBase
         public DbSet<Tests> Tests { get; set; }
         public DbSet<TestResults> TestResults { get; set; }
         public DbSet<Questions> Questions { get; set; }
-        public DbSet<QuestionResult> QuestionResults { get; set; }
         public DbSet<PassedTests> PassedTests { get; set; }
         public DbSet<Answers> Answers { get; set; }
         public DbSet<Media> Medias { get; set; }
