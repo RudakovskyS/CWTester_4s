@@ -32,7 +32,16 @@ namespace CWTester.ViewModels.AdminViewModels
         public string SecondAnswer { get; set; }
         public string ThirdAnswer { get; set; }
         public string CorrectAnswer { get; set; }
-        public string SelectedFile { get; set; }
+        private string selectedFile;
+        public string SelectedFile 
+        {
+            get { return selectedFile; }
+            set
+            {
+                selectedFile = value;
+                OnPropertyChanged("SelectedFile");
+            }
+        }
         private Command addImage;
         public ICommand AddImage
         {
@@ -70,7 +79,7 @@ namespace CWTester.ViewModels.AdminViewModels
                             Test = new ObservableCollection<Tests>(db.Tests).Last();
 
                             Media media = new Media();
-                            media.Path = "";
+                            media.Path = SelectedFile;
                             Questions question = new Questions();
                             question.TestId = Test.Id;
                             question.Text = Question;

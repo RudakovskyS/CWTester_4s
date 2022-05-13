@@ -24,6 +24,7 @@ namespace CWTester.ViewModels
         public Answers ThirdAnswer { get; set; }
         public Answers FourthAnswer { get; set; }
         public Answers CorrectAnswer { get; set; }
+        public Media Media { get; set; }
         public static int id { get; set; }
         public static int Result { get; set; }
         public static double Percent { get; set; }
@@ -43,6 +44,7 @@ namespace CWTester.ViewModels
                 ThirdAnswer = Answers.ElementAt(2);
                 FourthAnswer = Answers.ElementAt(3);
                 CorrectAnswer = Answers.Where(x => x.IsCorrect).First();
+                Media = new ObservableCollection<Media>(db.Medias).Where(x => x.Id == CurrentQuestion.MediaId).First();
             }
         }
         public IList<T> Shuffle<T>(IList<T> list)

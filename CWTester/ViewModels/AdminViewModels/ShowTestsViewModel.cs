@@ -81,7 +81,6 @@ namespace CWTester.ViewModels.AdminViewModels
                               db.SaveChanges();
                               SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new ShowTestsViewModel();
                               SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentUserConrol = new ShowTestsView();
-                              
                           }
                       }
                       catch (Exception e)
