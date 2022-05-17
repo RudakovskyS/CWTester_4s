@@ -14,7 +14,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <TextBlock Grid.Row="0" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="25" FontStyle="Italic" Text="You are logged in as"/>
+                <TextBlock Grid.Row="0" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="25" FontStyle="Italic" Text="{DynamicResource ProfileText}"/>
                 <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Top" FontSize="60" FontStyle="Oblique" Text="{Binding Path=LoggedUser.Login}"/>
             </Grid>
         </materialDesign:Card>

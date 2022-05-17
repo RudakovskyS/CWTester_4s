@@ -11,9 +11,9 @@
         <materialDesign:Card UniformCornerRadius="15">
             <Grid>
                 <StackPanel Orientation="Vertical" Width="150" VerticalAlignment="Center">
-                    <TextBox Text="{Binding Name}" materialDesign:HintAssist.Hint="Name"></TextBox>
-                    <TextBox Text="{Binding Description}" materialDesign:HintAssist.Hint="Description"></TextBox>
-                    <Button Content="Add test" Command="{Binding AddTest}"/>
+                    <TextBox Text="{Binding Name}" materialDesign:HintAssist.Hint="{DynamicResource Name}"></TextBox>
+                    <TextBox Text="{Binding Description}" materialDesign:HintAssist.Hint="{DynamicResource Description}"></TextBox>
+                    <Button Content="{DynamicResource AddTest}" Command="{Binding AddTest}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:Card>

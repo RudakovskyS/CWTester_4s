@@ -1,0 +1,37 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:v="clr-namespace:System;assembly=mscorlib">
+
+    <v:String x:Key="WelcomeAdminText">Здравствуйте, администраторы! Я хочу поблагодарить вас за ваш тяжелый труд. У нас такое классное сообщество только благодаря вам! Если вы не заняты вы можете создать тест нажав кнопку внизу окна!</v:String>
+    <v:String x:Key="Tests">Тесты</v:String>
+    <v:String x:Key="CreateNew">Новый тест</v:String>
+    <v:String x:Key="Results">Результаты</v:String>
+    <v:String x:Key="Users">Пользователи</v:String>
+    <v:String x:Key="CreateATest">Создать тест!</v:String>
+    <v:String x:Key="Name">Название: </v:String>
+    <v:String x:Key="Description">Описание: </v:String>
+    <v:String x:Key="Delete">Удалить</v:String>
+    <v:String x:Key="Welcome">Добро пожаловать!</v:String>
+    <v:String x:Key="AddTest">Добавить тест</v:String>
+    <v:String x:Key="Login">Логин</v:String>
+    <v:String x:Key="Password">Пароль</v:String>
+    <v:String x:Key="ConfirmPassword">Повторите пароль</v:String>
+    <v:String x:Key="Test">Тест</v:String>
+    <v:String x:Key="Result">Результат</v:String>
+    <v:String x:Key="Date">Дата</v:String>
+    <v:String x:Key="Role">Роль</v:String>
+    <v:String x:Key="WelcomeUserText">Привет, добро пожаловать в CWTester. Мы рады что вы выбрали именно нашу систему тестирования среди многих других. Мы надеемся вам понравится процесс работы с нашим продуктом!</v:String>
+    <v:String x:Key="Profile">Профиль</v:String>
+    <v:String x:Key="ProfileText">Вы вошли как</v:String>
+    <v:String x:Key="Question">Вопрос</v:String>
+    <v:String x:Key="FirstAnswer">Первый ответ</v:String>
+    <v:String x:Key="SecondAnswer">Второй ответ</v:String>
+    <v:String x:Key="ThirdAnswer">Третий ответ</v:String>
+    <v:String x:Key="CorrectAnswer">Правильный ответ</v:String>
+    <v:String x:Key="AddImage">Добавить картинку</v:String>
+    <v:String x:Key="Add">Добавить</v:String>
+    <v:String x:Key="AddQuestions">Добавите вопросы</v:String>
+    <v:String x:Key="ClearHistory">Очистить историю</v:String>
+    <v:String x:Key="Register">Зарегистрироваться</v:String>
+    <v:String x:Key="Registration">Регистрация</v:String>
+</ResourceDictionary>

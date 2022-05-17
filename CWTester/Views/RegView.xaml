@@ -11,9 +11,9 @@
         <Rectangle Height="280" VerticalAlignment="Top">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#a05344"/>
-                    <GradientStop Color="#321f28" Offset="1"/>
-                    <GradientStop Color="#734046" Offset="0.546"/>
+                    <GradientStop Color="#5203fc"/>
+                    <GradientStop Color="Transparent" Offset="1"/>
+                    <GradientStop Color="#25ba4f" Offset="0.75"/>
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
@@ -25,15 +25,15 @@
         <Grid VerticalAlignment="Bottom" Margin="35.2,0,35.2,30" Height="350">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
                 <Button Content="{materialDesign:PackIcon Kind=ArrowBack}" Width="40" Command="{Binding BackCommand}"/>
-                <Label Content="Registration" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="45,0,0,0" Foreground="Gray" FontSize="18"/>
+                <Label Content="{DynamicResource Registration}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="45,0,0,0" Foreground="Gray" FontSize="18"/>
             </StackPanel>
             <TextBlock Text="{Binding ErrorMessage}" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="35" Foreground="Red" FontSize="12" TextWrapping="Wrap"/>
             <StackPanel VerticalAlignment="Center" Margin="10">
-                <TextBox Margin="0,5" materialDesign:HintAssist.Hint="Login" Text="{Binding login}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="14"/>
-                <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="Password" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="14" x:Name="password_textbox" />
-                <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="Confirm Password" PasswordChanged="ConfPasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="14" x:Name="passwordConfirmation_textbox" />
+                <TextBox Margin="0,5" materialDesign:HintAssist.Hint="{DynamicResource Login}" Text="{Binding login}" Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontFamily="Champagne &amp; Limousines" FontSize="14"/>
+                <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="{DynamicResource Password}" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="14" x:Name="password_textbox" />
+                <PasswordBox Margin="0,5" materialDesign:HintAssist.Hint="{DynamicResource ConfirmPassword}" PasswordChanged="ConfPasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="14" x:Name="passwordConfirmation_textbox" />
             </StackPanel>
         </Grid>
-        <Button Width="150" Command="{Binding RegCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20" Content="Register"/>
+        <Button Width="150" Command="{Binding RegCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20" Content="{DynamicResource Register}"/>
     </Grid>
 </UserControl>

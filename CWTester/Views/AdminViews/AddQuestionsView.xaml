@@ -14,18 +14,18 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-                    <TextBlock Text="Add Questions" FontSize="30" FontWeight="Bold" Margin="10,10,10,10"/>
-                    <TextBox materialDesign:HintAssist.Hint="Question" Text="{Binding Question}" Width="200"/>
+                    <TextBlock Text="{DynamicResource AddQuestions}" FontSize="30" FontWeight="Bold" Margin="10,10,10,10"/>
+                    <TextBox materialDesign:HintAssist.Hint="{DynamicResource Question}" Text="{Binding Question}" Width="200"/>
                     
                 </StackPanel>
                 <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
-                    <Button Width="150" Margin="20" Command="{Binding AddImage}" Content="Add Image"/>
+                    <Button Width="150" Margin="20" Command="{Binding AddImage}" Content="{DynamicResource AddImage}"/>
                     <TextBlock Text="{Binding SelectedFile}" Width="200"/>
-                    <TextBox materialDesign:HintAssist.Hint="First Answer" Text="{Binding FirstAnswer}" Width="200"/>
-                    <TextBox materialDesign:HintAssist.Hint="Second Answer" Text="{Binding SecondAnswer}" Width="200"/>
-                    <TextBox materialDesign:HintAssist.Hint="Third Answer" Text="{Binding ThirdAnswer}" Width="200"/>
-                    <TextBox materialDesign:HintAssist.Hint="Correct Answer" Text="{Binding CorrectAnswer}" Width="200"/>
-                    <Button Width="150" Margin="10" Content="Add" Command="{Binding AddQuestion}"/>
+                    <TextBox materialDesign:HintAssist.Hint="{DynamicResource FirstAnswer}" Text="{Binding FirstAnswer}" Width="200"/>
+                    <TextBox materialDesign:HintAssist.Hint="{DynamicResource SecondAnswer}" Text="{Binding SecondAnswer}" Width="200"/>
+                    <TextBox materialDesign:HintAssist.Hint="{DynamicResource ThirdAnswer}" Text="{Binding ThirdAnswer}" Width="200"/>
+                    <TextBox materialDesign:HintAssist.Hint="{DynamicResource CorrectAnswer}" Text="{Binding CorrectAnswer}" Width="200"/>
+                    <Button Width="150" Margin="10" Content="{DynamicResource Add}" Command="{Binding AddQuestion}"/>
                 </StackPanel>
             </Grid>
         </materialDesign:Card>

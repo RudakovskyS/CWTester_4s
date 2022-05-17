@@ -15,18 +15,18 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="190*"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="60"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.ColumnSpan="2" Text="{Binding CurrentQuestion.Text}" VerticalAlignment="Bottom" HorizontalAlignment="Center" FontSize="20" TextWrapping="WrapWithOverflow" TextAlignment="Center"></TextBlock>
                 <Image Grid.Row="1" Grid.ColumnSpan="2" Source="{Binding Media.Path}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Grid.Row="2" Width="150" Content="{Binding FirstAnswer.Text}" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="10" Click="Button_Click_1" x:Name="Btn1"/>
-                <Button Grid.Row="3" Width="150" Content="{Binding SecondAnswer.Text}" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="10" Click="Button_Click_2" x:Name="Btn2"/>
-                <Button Grid.Row="2" Grid.Column="1" Content="{Binding ThirdAnswer.Text}" Width="150" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Click="Button_Click_3" x:Name="Btn3"/>
-                <Button Grid.Row="3" Grid.Column="1" Content="{Binding FourthAnswer.Text}" Width="150" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Click="Button_Click_4" x:Name="Btn4"/>
+                <Button Grid.Row="2" Content="{Binding FirstAnswer.Text}" VerticalAlignment="Bottom" Width="200" Height="40" FontSize="20" HorizontalAlignment="Right" Margin="10" Click="Button_Click_1" x:Name="Btn1"/>
+                <Button Grid.Row="3" Content="{Binding SecondAnswer.Text}" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" HorizontalAlignment="Right" Margin="10" Click="Button_Click_2" x:Name="Btn2"/>
+                <Button Grid.Row="2" Grid.Column="1" Content="{Binding ThirdAnswer.Text}" Width="200" Height="40" FontSize="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10" Click="Button_Click_3" x:Name="Btn3"/>
+                <Button Grid.Row="3" Grid.Column="1" Content="{Binding FourthAnswer.Text}" Width="200" Height="40" FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10" Click="Button_Click_4" x:Name="Btn4"/>
                 <Button Grid.Row="4" Grid.ColumnSpan="2" Width="50" Height="50" Command="{Binding ToNextQuestion}">
                     <materialDesign:PackIcon Kind="ArrowRight"/>
                 </Button>

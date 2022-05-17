@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\App.xaml
-17550701060
+19725503755
 
 60-634444681
 201172875438
-Views\AdminViews\AddQuestionsView.xaml;Views\AdminViews\AdminResultView.xaml;Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\ShowTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\PassTestView.xaml;Views\ProfileView.xaml;Views\RegView.xaml;Views\ResultView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
+Resources\EnLocalization.xaml;Resources\RuLocalization.xaml;Views\AdminViews\AddQuestionsView.xaml;Views\AdminViews\AdminResultView.xaml;Views\AdminViews\AllUsersListView.xaml;Views\AdminViews\CreateTestView.xaml;Views\AdminViews\ShowTestsView.xaml;Views\AdminViews\MainAdminWindow.xaml;Views\AdminViews\WelcomeAdminView.xaml;Views\MainWindow.xaml;Resources\MenuButton.xaml;Views\AuthView.xaml;Views\LogInView.xaml;Views\PassTestView.xaml;Views\ProfileView.xaml;Views\RegView.xaml;Views\ResultView.xaml;Views\TestsView.xaml;Views\WelcomeView.xaml;
 
 False
 

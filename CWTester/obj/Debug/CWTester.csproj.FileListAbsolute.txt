@@ -120,3 +120,5 @@ E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\AdminViews\AdminResultView.baml
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Views\ProfileView.baml
 E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\CWTester.Migrations.FixModel.resources
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Resources\EnLocalization.baml
+E:\Уник\2курс\2сем\Курсач\CWTester_4s\CWTester\obj\Debug\Resources\RuLocalization.baml

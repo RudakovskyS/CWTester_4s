@@ -9,14 +9,14 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="46*"/>
+            <RowDefinition Height="60*"/>
             <RowDefinition Height="69*"/>
             <RowDefinition Height="70"/>
             <RowDefinition Height="265*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="0,0,0,0.4">
+        <Grid Grid.Row="0" Grid.RowSpan="2" Margin="0,0,0,0.4">
             <materialDesign:Card Margin="10,2,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
-                <TextBlock Text="Welcome" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
+                <TextBlock Text="{DynamicResource Welcome}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25"/>
             </materialDesign:Card>
         </Grid>
         <Grid Grid.Row="1">
@@ -48,15 +48,15 @@
                                         <StackPanel Orientation="Vertical" Height="75" Width="130">
 
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="Name: " FontFamily="Helvetica"/>
+                                                <TextBlock Text="{DynamicResource Name}" FontFamily="Helvetica"/>
                                                 <TextBlock Text="{Binding Name}" FontFamily="Helvetica" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="Description: "/>
+                                                <TextBlock Text="{DynamicResource Description}"/>
                                                 <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
 
-                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.Delete}" Content="Delete"/>
+                                            <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.Delete}" Content="{DynamicResource Delete}"/>
                                             <Separator Background="Black"/>
                                         </StackPanel>
                                     </materialDesign:Card>

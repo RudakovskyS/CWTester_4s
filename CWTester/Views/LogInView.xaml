@@ -32,8 +32,8 @@
                     <PasswordBox Margin="0,10" materialDesign:HintAssist.Hint="{DynamicResource Password}" PasswordChanged="PasswordBox_PasswordChanged" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" FontFamily="Champagne &amp; Limousines" FontSize="18" x:Name="password_textbox" />
                 </StackPanel>
             </Grid>
-            <Button Width="150" Command="{Binding AuthCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="LogIn"/>
-            <Button Width="150" Command="{Binding OpenRegCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,33" Content="Register"/>
+            <Button Width="150" Command="{Binding AuthCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,65" Content="{DynamicResource Login}"/>
+            <Button Width="150" Command="{Binding OpenRegCommand}" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,33" Content="{DynamicResource Register}"/>
         </Grid>
     </Grid>
 </UserControl>

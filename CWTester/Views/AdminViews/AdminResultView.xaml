@@ -13,12 +13,12 @@
         </Grid.RowDefinitions>
         <DataGrid ItemsSource="{Binding TestResults}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Login" Binding="{Binding User.UserAuth.Login}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Test" Binding="{Binding PassedTests.Tests.Name}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Result" Binding="{Binding Result}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Date" Binding="{Binding PassedTests.TestDate}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{DynamicResource Login}" Binding="{Binding User.UserAuth.Login}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{DynamicResource Test}" Binding="{Binding PassedTests.Tests.Name}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{DynamicResource Result}" Binding="{Binding Result}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{DynamicResource Date}" Binding="{Binding PassedTests.TestDate}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Grid.Row="1" Width="150" HorizontalAlignment="Right" Content="Clear history" Command="{Binding ClearHistory}"/>
+        <Button Grid.Row="1" Width="150" HorizontalAlignment="Right" Content="{DynamicResource ClearHistory}" Command="{Binding ClearHistory}"/>
     </Grid>
 </UserControl>

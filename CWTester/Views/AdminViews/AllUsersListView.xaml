@@ -9,8 +9,8 @@
     <Grid>
         <DataGrid ItemsSource="{Binding Users}" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Login" Binding="{Binding UserAuth.Login}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Role" Binding="{Binding Role}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{DynamicResource Login}" Binding="{Binding UserAuth.Login}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="{DynamicResource Role}" Binding="{Binding Role}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

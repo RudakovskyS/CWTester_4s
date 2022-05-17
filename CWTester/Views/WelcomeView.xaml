@@ -9,7 +9,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <materialDesign:Card Padding="15" materialDesign:ShadowAssist.ShadowDepth="Depth5" Background="#5203fc" UniformCornerRadius="15">
-            <TextBlock FontStyle="Oblique" TextAlignment="Justify" Padding="15" FontSize="30" TextWrapping="WrapWithOverflow"  Text="Hey! Welcome to the CWTester. I`m glad that you have chosen my testing system among lots of others. I hope you will enjoy your expirience with it!"/>
+            <TextBlock FontStyle="Oblique" TextAlignment="Justify" Padding="15" FontSize="30" TextWrapping="WrapWithOverflow"  Text="{DynamicResource WelcomeUserText}"/>
         </materialDesign:Card>
     </Grid>
 </UserControl>

@@ -74,6 +74,7 @@ namespace CWTester.ViewModels.AdminViewModels
                               SearchedAnswers = new ObservableCollection<Answers>(db.Answers);
                               SearchedMedia = new ObservableCollection<Media>(db.Medias);
                               db.Answers.RemoveRange(SearchedAnswers.Where(x => x.Questions.Tests.Id == Tests[id].Id));
+                              //db.Medias.RemoveRange(SearchedMedia.Where(x => x.Id == SearchedQuestions.Where(y => y.Tests == Tests[id]).First().Id));
                               db.Questions.RemoveRange(SearchedQuestions.Where(x => x.Tests.Id == Tests[id].Id));
                               db.PassedTests.RemoveRange(SearchedPassedTests.Where(x => x.TestId == Tests[id].Id));
                               db.TestResults.RemoveRange(SearchedResults.Where(x => x.PassedTests.Tests.Id == Tests[id].Id));
@@ -126,7 +127,6 @@ namespace CWTester.ViewModels.AdminViewModels
             }
         }
 
-        
         public void Close()
         {
             foreach (System.Windows.Window window in System.Windows.Application.Current.Windows)
