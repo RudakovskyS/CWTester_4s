@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using CWTester.Views;
+using System.Globalization;
 
 namespace CWTester.ViewModels
 {
@@ -42,6 +43,7 @@ namespace CWTester.ViewModels
             SingletonAuth.getInstance(this);
             CurrentViewModel = new LoginViewModel();
             CurrentUserConrol = new LogInView();
+            App.Language = CultureInfo.GetCultureInfo("en-US");
         }
         public static void Close()
         {

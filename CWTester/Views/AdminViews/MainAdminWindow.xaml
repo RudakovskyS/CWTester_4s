@@ -17,7 +17,7 @@
             <RowDefinition Height="253*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" HorizontalAlignment="Right" Orientation="Horizontal">
-            <Button BorderBrush="Transparent" Background="Transparent" Height="60" Width="60" VerticalAlignment="Center" HorizontalAlignment="Right">
+            <Button Margin="0 0 15 0" BorderBrush="Transparent" Command="{Binding ChangeLanguage}" Background="Transparent" Height="60" Width="60" VerticalAlignment="Center" HorizontalAlignment="Right">
                 <materialDesign:PackIcon Kind="WorldWideWeb" Height="25" Width="25"/>
             </Button>
             <Button Grid.Column="1" Margin="0 0 15 0" Command="{Binding LogOut}" BorderBrush="Transparent" Background="Transparent" Height="60" Width="60" VerticalAlignment="Center" HorizontalAlignment="Right">

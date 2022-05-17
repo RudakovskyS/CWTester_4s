@@ -3,6 +3,7 @@ using CWTester.SingletonView;
 using CWTester.Views;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,6 +109,26 @@ namespace CWTester.ViewModels
                     authView.Show();
                     MainViewModel.Close();
 
+                }));
+            }
+        }
+
+        private Command changeLanguage;
+        public ICommand ChangeLanguage
+        {
+            get
+            {
+                return changeLanguage ?? (changeLanguage = new Command(
+                (obj) =>
+                {
+                    if (App.Language == CultureInfo.GetCultureInfo("en-US"))
+                    {
+                        App.Language = CultureInfo.GetCultureInfo("ru-RU");
+                    }
+                    else
+                    {
+                        App.Language = CultureInfo.GetCultureInfo("en-US");
+                    }
                 }));
             }
         }
