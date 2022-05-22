@@ -66,25 +66,29 @@ namespace CWTester.ViewModels
                              UserAuth userAuth = new UserAuth();
                              user.UserAuthId = userAuth.Id;
                              userAuth.Login = login;
+                             if (login.Length < 3 || login.Length > 20)
+                             {
+                                 throw new Exception("Login length must be from 3 to 20 symbols");
+                             }
                              if (password != confirmPassword)
                              {
-                                 throw new Exception("Пароли не совпадают");
+                                 throw new Exception("Passwords don`t match");
                              }
-                             if (password != null & password[0] != ' ')
+                             if (password != null && password[0] != ' ' && password.Length > 5)
                              {
                                  password = Encryptor.Encrypt(password);
                                  userAuth.Password = password;
                              }
                              else
                              {
-                                 throw new Exception("Не верный формат пароля");
+                                 throw new Exception("Wrong password format");
                              }
                                  user.Role = "User";
                              if (login != null && password != null && confirmPassword != null)
                              {
                                  if (db.Users.Any(a => a.UserAuth.Login == login))
                                  {
-                                     throw new Exception("Пользователь с такими данными уже существует");
+                                     throw new Exception("Login is already taken");
                                  }
                                  else
                                  {

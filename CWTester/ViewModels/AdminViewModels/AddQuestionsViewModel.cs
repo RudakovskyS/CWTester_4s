@@ -101,8 +101,6 @@ namespace CWTester.ViewModels.AdminViewModels
                             correctAnswer.Text = CorrectAnswer;
                             correctAnswer.IsCorrect = true;
                             correctAnswer.Questions = question;
-                            
-                            
                             db.Questions.Add(question);
                             db.Answers.Add(firstAnswer);
                             db.Answers.Add(secondAnswer);

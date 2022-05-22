@@ -27,11 +27,12 @@
     <v:String x:Key="FirstAnswer">First Answer</v:String>
     <v:String x:Key="SecondAnswer">Second Answer</v:String>
     <v:String x:Key="ThirdAnswer">Third Answer</v:String>
-    <v:String x:Key="CorrectAnswer">Correct Answer</v:String>
+    <v:String x:Key="CorrectAnswer">Fourth (correct) Answer</v:String>
     <v:String x:Key="AddImage">Add Image</v:String>
     <v:String x:Key="Add">Add</v:String>
     <v:String x:Key="AddQuestions">Add Questions</v:String>
     <v:String x:Key="ClearHistory">Clear history</v:String>
     <v:String x:Key="Register">Register</v:String>
     <v:String x:Key="Registration">Registration</v:String>
+    <v:String x:Key="Average">Average:</v:String>
 </ResourceDictionary>

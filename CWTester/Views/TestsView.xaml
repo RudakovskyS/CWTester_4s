@@ -36,7 +36,7 @@
         </Grid>
         <Grid Grid.Row="3">
             <materialDesign:Card Margin="10,10,10,10" materialDesign:ShadowAssist.ShadowDepth="Depth4" UniformCornerRadius="5">
-                <ListBox ItemsSource="{Binding SearchedTests}" SelectedItem="{Binding SelectedTest}" x:Name="testsList" MouseDoubleClick="testsList_MouseDoubleClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
+                <ListBox ItemsSource="{Binding SearchedTests}" SelectedItem="{Binding SelectedTest}" HorizontalContentAlignment="Center" x:Name="testsList" MouseDoubleClick="testsList_MouseDoubleClick" MinHeight="244.4" MaxHeight="400" SelectionMode="Extended">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border CornerRadius="6" BorderThickness="1" DockPanel.Dock="Top" BorderBrush="Transparent">
@@ -46,16 +46,17 @@
                               CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=PassTest}" />
                                 </Border.InputBindings>
                                 <StackPanel Orientation="Vertical">
-                                    <materialDesign:Card UniformCornerRadius="10" MaxWidth="150">
-                                        <StackPanel Orientation="Vertical" Height="75" Width="150">
+                                    <materialDesign:Card UniformCornerRadius="10" MaxWidth="300">
+                                        <StackPanel Orientation="Vertical" Height="75" Width="300" >
 
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Name}" FontFamily="Helvetica"/>
-                                                <TextBlock Text="{Binding Name}" FontFamily="Helvetica" TextWrapping="WrapWithOverflow"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                                
+                                                <TextBlock Text="{DynamicResource Name}" TextAlignment="Center" FontSize="14" FontFamily="Helvetica"/>
+                                                <TextBlock Text="{Binding Name}" FontFamily="Helvetica" FontSize="14" Margin="5 0 0 0" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
-                                            <StackPanel Orientation="Horizontal">
-                                                <TextBlock Text="{DynamicResource Description}"/>
-                                                <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 10 0 0">
+                                                <TextBlock Text="{DynamicResource Description}" FontSize="14" FontFamily="Helvetica" Margin="0 3 0 0"/>
+                                                <TextBlock Text="{Binding Description}" FontSize="14" Margin="5 0 0 0" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
                                         </StackPanel>
                                     </materialDesign:Card>
@@ -73,11 +74,11 @@
                             </Style.Triggers>
                         </Style>
                     </ListBox.ItemContainerStyle>
-                    <ListBox.ItemsPanel>
+                    <!--<ListBox.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel />
                         </ItemsPanelTemplate>
-                    </ListBox.ItemsPanel>
+                    </ListBox.ItemsPanel>-->
                 </ListBox>
             </materialDesign:Card>
         </Grid>

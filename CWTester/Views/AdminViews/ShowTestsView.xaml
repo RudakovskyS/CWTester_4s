@@ -49,11 +49,11 @@
 
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{DynamicResource Name}" FontFamily="Helvetica"/>
-                                                <TextBlock Text="{Binding Name}" FontFamily="Helvetica" TextWrapping="WrapWithOverflow"/>
+                                                <TextBlock Text="{Binding Name}" Padding="10 0 0 0" FontFamily="Helvetica" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
                                             <StackPanel Orientation="Horizontal">
                                                 <TextBlock Text="{DynamicResource Description}"/>
-                                                <TextBlock Text="{Binding Description}" TextWrapping="WrapWithOverflow"/>
+                                                <TextBlock Text="{Binding Description}" Padding="10 0 0 0" TextWrapping="WrapWithOverflow"/>
                                             </StackPanel>
 
                                             <Button Command="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.Delete}" Content="{DynamicResource Delete}"/>

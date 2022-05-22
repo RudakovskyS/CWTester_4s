@@ -45,11 +45,12 @@ namespace CWTester.ViewModels
                          {
                              int authUserId;
                              password = Encryptor.Encrypt(password);
-                             authUserId = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault() == null ? 0 : db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault().Id;
+                             authUserId = db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault() == null ? 0 :
+                             db.UserAuths.Where(a => a.Login == login && a.Password == password).FirstOrDefault().Id;
                              user = db.Users.Where(a => a.UserAuthId == authUserId).FirstOrDefault();
                              if (user == null)
                              {
-                                 throw new Exception("Невозможно найти пользователя с введенными данными");
+                                 throw new Exception("Incorrect login or password");
                              }
                              if (user.Role == "User")
                              {

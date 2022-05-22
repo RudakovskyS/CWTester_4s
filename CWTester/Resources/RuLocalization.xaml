@@ -27,11 +27,12 @@
     <v:String x:Key="FirstAnswer">Первый ответ</v:String>
     <v:String x:Key="SecondAnswer">Второй ответ</v:String>
     <v:String x:Key="ThirdAnswer">Третий ответ</v:String>
-    <v:String x:Key="CorrectAnswer">Правильный ответ</v:String>
+    <v:String x:Key="CorrectAnswer">Четвертый (правильный) ответ</v:String>
     <v:String x:Key="AddImage">Добавить картинку</v:String>
     <v:String x:Key="Add">Добавить</v:String>
     <v:String x:Key="AddQuestions">Добавите вопросы</v:String>
     <v:String x:Key="ClearHistory">Очистить историю</v:String>
     <v:String x:Key="Register">Зарегистрироваться</v:String>
     <v:String x:Key="Registration">Регистрация</v:String>
+    <v:String x:Key="Average">Средний результат:</v:String>
 </ResourceDictionary>

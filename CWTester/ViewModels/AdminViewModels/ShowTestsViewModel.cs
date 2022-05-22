@@ -74,10 +74,16 @@ namespace CWTester.ViewModels.AdminViewModels
                               SearchedAnswers = new ObservableCollection<Answers>(db.Answers);
                               SearchedMedia = new ObservableCollection<Media>(db.Medias);
                               db.Answers.RemoveRange(SearchedAnswers.Where(x => x.Questions.Tests.Id == Tests[id].Id));
-                              //db.Medias.RemoveRange(SearchedMedia.Where(x => x.Id == SearchedQuestions.Where(y => y.Tests == Tests[id]).First().Id));
-                              db.Questions.RemoveRange(SearchedQuestions.Where(x => x.Tests.Id == Tests[id].Id));
-                              db.PassedTests.RemoveRange(SearchedPassedTests.Where(x => x.TestId == Tests[id].Id));
+                              foreach (var questionItem in SearchedQuestions.Where(x => x.Tests.Id == Tests[id].Id))
+                              {
+                                  foreach (var mediaItem in SearchedMedia)
+                                  {
+                                      if (questionItem.MediaId == mediaItem.Id)
+                                          db.Medias.Remove(mediaItem);
+                                  }
+                              }
                               db.TestResults.RemoveRange(SearchedResults.Where(x => x.PassedTests.Tests.Id == Tests[id].Id));
+                              db.PassedTests.RemoveRange(SearchedPassedTests.Where(x => x.TestId == Tests[id].Id));
                               db.Tests.Remove(SearchedTests.First(x => x.Name == Tests[id].Name));
                               db.SaveChanges();
                               SingletonAdmin.getInstance(null).MainAdminViewModel.CurrentViewModel = new ShowTestsViewModel();

@@ -17,7 +17,6 @@ namespace CWTester.ViewModels.AdminViewModels
     {
         public string Name { get; set; }
         public string Description { get; set; }
-
         private Command addTest;
         public ICommand AddTest
         {
@@ -30,12 +29,16 @@ namespace CWTester.ViewModels.AdminViewModels
                     {
                         using (TesterContext db = new TesterContext())
                         {
+                            if(Name == null) 
+                            {
+                                throw new Exception("Name is too short!");
+                            }
                             Tests test = new Tests();
                             test.Name = Name;
                             test.Description = Description;
                             if (db.Tests.Any(x => x.Name == test.Name))
                             {
-                                throw new Exception("Тест с таким именем уже существует");
+                                throw new Exception("Test with this name already exists");
                             }
                             db.Tests.Add(test);
                             db.SaveChanges();

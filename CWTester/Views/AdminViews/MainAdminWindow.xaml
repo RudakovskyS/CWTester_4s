@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:CWTester.Views.AdminViews"
         mc:Ignorable="d"
-        Title="MainAdminWindow" Height="450" Width="800" Background="#6f42f5">
+        Title="CWTester Admin" Height="500" Width="800" Background="#6f42f5" Icon="/Resources/CWTester.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>

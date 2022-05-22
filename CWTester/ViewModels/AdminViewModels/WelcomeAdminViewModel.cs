@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace CWTester.ViewModels.AdminViewModels
 {
-    public class WelcomeAdminViewModel
+    public class WelcomeAdminViewModel : BaseViewModel
     {
         private Command createTestPage;
         public ICommand CreateTestPage

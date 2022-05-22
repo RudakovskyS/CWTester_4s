@@ -28,13 +28,10 @@ namespace CWTester.ViewModels
             }
         }
 
-        public IEnumerable<Questions> SearchedQuestions { get; private set; }
-        public IEnumerable<Answers> SearchedAnswers { get; private set; }
-        public IEnumerable<Media> SearchedMedia { get; private set; }
         public string searchText { get; set; }
-        public int id { get; set; }
         public static Tests SelectedTest { get; set; }
-
+        public double TestResult { get; set; }
+        public int id { get; set; }
         public static Tests CurrentTest { get; set; }
         public TestsViewModel()
         {
@@ -42,8 +39,18 @@ namespace CWTester.ViewModels
             {
                 try
                 {
+
                     Tests = new ObservableCollection<Tests>(db.Tests);
                     SearchedTests = new ObservableCollection<Tests>(Tests);
+                    foreach (var item in Tests)
+                    {
+                        if (new ObservableCollection<Questions>(db.Questions).Where(x => x.TestId == item.Id).Count() == 0)
+                        {
+                            db.Tests.Remove(item);
+                            db.SaveChanges();
+                        }
+                    }
+                    
                 }
                 catch (Exception ex)
                 {
@@ -63,11 +70,16 @@ namespace CWTester.ViewModels
                       {
                           using (TesterContext db = new TesterContext())
                           {
-                              CurrentTest = new ObservableCollection<Tests>(db.Tests).Where(x => x.Id == SelectedTest.Id).FirstOrDefault();
-                              SearchedQuestions = new ObservableCollection<Questions>(db.Questions);
-                              SearchedAnswers = new ObservableCollection<Answers>(db.Answers);
-                              SearchedMedia = new ObservableCollection<Media>(db.Medias);
-                              
+                              try
+                              {
+                                  CurrentTest = new ObservableCollection<Tests>(db.Tests).Where(x => x.Id == SelectedTest.Id).FirstOrDefault();
+                                  TestResult = new ObservableCollection<TestResults>(db.TestResults).Where(x =>
+                                  x.UserId == LoginViewModel.user.Id).Average(x => x.Result);
+                              }
+                              catch (Exception)
+                              {
+                                  MessageBox.Show("Good luck at your first try!");
+                              }
                               SingletonUser.getInstance(null).MainViewModel.CurrentViewModel = new PassTestViewModel();
                               SingletonUser.getInstance(null).MainViewModel.CurrentUserConrol = new PassTestView();
 

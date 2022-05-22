@@ -34,7 +34,17 @@ namespace CWTester.ViewModels
         {
             using (TesterContext db = new TesterContext())
             {
-                Test = TestsViewModel.CurrentTest;
+                try
+                {
+                    Test = TestsViewModel.CurrentTest;
+                    
+                }
+                catch (Exception)
+                {
+                    SingletonUser.getInstance(null).MainViewModel.CurrentViewModel = new TestsViewModel();
+                    SingletonUser.getInstance(null).MainViewModel.CurrentUserConrol = new TestsView();
+                }
+                
                 Questions = new ObservableCollection<Questions>(db.Questions).Where(x => x.TestId.Equals(Test.Id));
                 CurrentQuestion = Questions.ElementAt(id);
                 Answers = new ObservableCollection<Answers>(db.Answers).Where(x => x.Questions.Id == CurrentQuestion.Id);
@@ -88,6 +98,7 @@ namespace CWTester.ViewModels
                           PassedTests passedTests = new PassedTests();
                           
                           passedTests.TestDate = DateTime.Now;
+                          passedTests.TestId = Test.Id;
                           testResults.PassedTests = passedTests;
                           testResults.Result = (int)(Percent * 100);
                           using (TesterContext db = new TesterContext())

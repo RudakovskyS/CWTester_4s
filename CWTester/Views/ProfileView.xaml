@@ -13,9 +13,14 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" TextAlignment="Center" VerticalAlignment="Bottom" FontSize="25" FontStyle="Italic" Text="{DynamicResource ProfileText}"/>
                 <TextBlock Grid.Row="1" TextAlignment="Center" VerticalAlignment="Top" FontSize="60" FontStyle="Oblique" Text="{Binding Path=LoggedUser.Login}"/>
+                <StackPanel Grid.Row="2" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <TextBlock VerticalAlignment="Top" FontSize="25" FontStyle="Oblique" Text="{DynamicResource Average}"/>
+                    <TextBlock FontSize="25" Text="{Binding AverageResult}" Padding="10 0 0 0"/>
+                </StackPanel>
             </Grid>
         </materialDesign:Card>
     </Grid>
