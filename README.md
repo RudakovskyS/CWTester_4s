@@ -1,7 +1,7 @@
 # CWTester is a course project for OOP discipline which is done on WPF with usage of MS SQL database
 
 <ul>
-  <h2>Used technologys</h2>
+  <h2>Used technologies</h2>
   <li>WPF</li>
   <li>Entity Framework 6.4.4 Code-first</li>
   <li>Material Design</li>
