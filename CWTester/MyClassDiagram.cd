@@ -1,2 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CWTester.ViewModels.AdminViewModels.AddQuestionsViewModel" Collapsed="true">
+    <Position X="22" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAABAAQCAAAEAgAAAAFMAAIACAACAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AddQuestionsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AdminViewModels.AdminResultsViewModel" Collapsed="true">
+    <Position X="23.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAACAAAAAAAAAAAAAABAgAAAAIAAIAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AdminResultsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AdminViewModels.AllUsersListViewModel" Collapsed="true">
+    <Position X="29.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\AllUsersListViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AdminViewModels.CreateTestViewModel" Collapsed="true">
+    <Position X="28.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAABAAAAAQQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\CreateTestViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AdminViewModels.MainAdminViewModel" Collapsed="true">
+    <Position X="32" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIAAAABEGAAgQAAQAAIAAAACCIAgAACACAAQA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\MainAdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AdminViewModels.ShowTestsViewModel" Collapsed="true">
+    <Position X="22" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAKAAhAAAAAAAAAgAAAAAAQBEAEgAABAIAAABACCggA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\ShowTestsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AdminViewModels.WelcomeAdminViewModel" Collapsed="true">
+    <Position X="25.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAACAAAA=</HashCode>
+      <FileName>ViewModels\AdminViewModels\WelcomeAdminViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.AuthViewModel" Collapsed="true">
+    <Position X="31.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAQAAIAAAACAAAAAAAACAAAA=</HashCode>
+      <FileName>ViewModels\AuthViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.BaseViewModel" Collapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\BaseViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CWTester.ViewModels.LoginViewModel" Collapsed="true">
+    <Position X="33.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAEAAAAAAAAAAgAAAAKAAAAAgAAAAAAAAgCAEQA=</HashCode>
+      <FileName>ViewModels\LogInViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.MainViewModel" Collapsed="true">
+    <Position X="27" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAIAAAAAEEAAgAAAQAAIEAAACBIAgAACACAAQA=</HashCode>
+      <FileName>ViewModels\MainViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.PassTestViewModel" Collapsed="true">
+    <Position X="24.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAAAAABAABAAAAAAQAAAAAAAFEQAAACAAEEgQ=</HashCode>
+      <FileName>ViewModels\PassTestViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.ProfileViewModel" Collapsed="true">
+    <Position X="29.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewModels\ProfileViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.RegViewModel" Collapsed="true">
+    <Position X="31" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAgAAAIAAAICAAAAAAAAAAAAAEAAAAAAAAAAggAEAA=</HashCode>
+      <FileName>ViewModels\RegViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.ResultsViewModel" Collapsed="true">
+    <Position X="33.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAAAAAAAAAAAABAAAAAAAAAIAAAAAAIAAAAA=</HashCode>
+      <FileName>ViewModels\ResultsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.TestsViewModel" Collapsed="true">
+    <Position X="24.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAIAABAAAAAAAAAAAAAAAAQAAAAgAIAAIACACACCggA=</HashCode>
+      <FileName>ViewModels\TestsViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CWTester.ViewModels.WelcomeViewModel" Collapsed="true">
+    <Position X="27.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>ViewModels\WelcomeViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
