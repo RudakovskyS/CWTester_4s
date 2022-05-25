@@ -10,4 +10,4 @@
   <li>Command</li>
   <li>Singleton</li>
 </ul>
-<h1>The course project is defended on __</h1>
+<h1>The course project is defended on 8</h1>
