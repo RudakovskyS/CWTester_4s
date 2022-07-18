@@ -11,3 +11,4 @@
   <li>Singleton</li>
 </ul>
 <h1>The course project is defended on 8</h1>
+<p>To create an admin you need to register and change role in database from User to Admin</p>
